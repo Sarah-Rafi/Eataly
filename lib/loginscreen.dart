@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 Positioned(
                   left: 50,
-                  top: 570,
+                  top: 580,
                   child: SizedBox(
                     width: 255.08,
                     height: 17,
@@ -152,11 +152,11 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 65,
+                  top: 55,
                   left: (340 - 140) / 2,
                   child: SizedBox(
                     width: 150,
-                    height: 117,
+                    height: 100,
                     child: Image.asset(
                       'assets/eataly.png',
                       fit: BoxFit.fill,
@@ -165,7 +165,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Positioned(
                   left: 47,
-                  top: 190,
+                  top: 170,
                   child: SizedBox(
                     width: 262,
                     child: Text(
@@ -183,7 +183,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Positioned(
                   left: 7,
-                  top: 240,
+                  top: 260,
                   child: SizedBox(
                     width: 340,
                     height: 278,
@@ -202,18 +202,18 @@ class LoginScreen extends StatelessWidget {
                             height: 0.03,
                           ),
                         ),
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 25),
                         SizedBox(
-                          width: 340,
+                          width: 350,
                           height: 99,
                           child: Stack(
                             children: [
                               Positioned(
-                                left: 15,
-                                top: 36,
+                                left: 22.5,
+                                top: 35,
                                 child: Container(
-                                  width: 310,
-                                  height: 63,
+                                  width: 300,
+                                  height: 53,
                                   decoration: ShapeDecoration(
                                     color: Color(0x33D9D9D9),
                                     shape: RoundedRectangleBorder(
@@ -225,7 +225,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: 15,
+                                left: 22.5,
                                 top: 5,
                                 child: SizedBox(
                                   width: 300,
@@ -234,7 +234,7 @@ class LoginScreen extends StatelessWidget {
                                     'Phone Number',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -244,7 +244,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               Positioned(
                                 left: 30,
-                                top: 60,
+                                top: 50,
                                 child: SizedBox(
                                   width: 173,
                                   height: 16,
@@ -263,9 +263,9 @@ class LoginScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 0),
                         SizedBox(
-                          width: 340,
+                          width: 350,
                           height: 99,
                           child: Stack(
                             children: [
@@ -330,7 +330,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Positioned(
                   left: 107,
-                  top: 600,
+                  top: 605,
                   child: SizedBox(
                     width: 154,
                     height: 69,
@@ -430,19 +430,19 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 63,
+                  left: 12,
                   top: 500,
                   child: SizedBox(
                     width: 340,
-                    height: 63,
+                    height: 99,
                     child: Stack(
                       children: [
                         Positioned(
                           left: 10,
                           top: 0,
                           child: Container(
-                            width: 200,
-                            height: 50,
+                            width: 310,
+                            height: 63,
                             decoration: ShapeDecoration(
                               color: Color(0xFF00B287),
                               shape: RoundedRectangleBorder(
@@ -451,8 +451,8 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 90,
-                          top: 25,
+                          left: 138,
+                          top: 30,
                           child: SizedBox(
                             width: 61,
                             height: 24,
