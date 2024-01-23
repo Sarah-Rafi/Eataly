@@ -1,0 +1,48 @@
+name: eataly
+description: A new Flutter project.
+
+version: 0.0.1+1
+
+environment:
+  sdk: ^3.1.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  english_words: ^4.0.0
+  provider: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png
+    - assets/rectangle.png
+    - assets/eataly.png
+    - assets/backgroundimage.png
+    - assets/facebook.png
+    - assets/google.png
+    
+
+  fonts:
+    - family: Forum
+      fonts:
+        - asset: assets/fonts/Forum.ttf
+
+
+
+
+
+
+
+
+
+
+    
+
