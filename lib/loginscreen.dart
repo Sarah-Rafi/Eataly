@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -46,8 +48,8 @@ class LoginScreen extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  left: 42,
-                  top: 532,
+                  left: 50,
+                  top: 550,
                   child: SizedBox(
                     width: 255.08,
                     height: 17,
@@ -101,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Positioned(
                           left: 117.11,
-                          top: 0,
+                          top: 2,
                           child: Text(
                             'OR',
                             textAlign: TextAlign.center,
@@ -150,17 +152,20 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
+                  top: 65,
+                  left: (340 - 140) / 2,
                   child: SizedBox(
-                    width: 162,
+                    width: 150,
                     height: 117,
-                    child: Image.asset('assets/eataly.png',
+                    child: Image.asset(
+                      'assets/eataly.png',
                       fit: BoxFit.fill,
                     ),
                   ),
                 ),
                 Positioned(
-                  left: 39,
-                  top: 117,
+                  left: 47,
+                  top: 190,
                   child: SizedBox(
                     width: 262,
                     child: Text(
@@ -177,8 +182,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 0,
-                  top: 222,
+                  left: 7,
+                  top: 250,
                   child: SizedBox(
                     width: 340,
                     height: 278,
@@ -197,17 +202,17 @@ class LoginScreen extends StatelessWidget {
                             height: 0.03,
                           ),
                         ),
-                        const SizedBox(height: 24),
+                        const SizedBox(height: 50),
                         SizedBox(
                           width: 340,
                           height: 99,
                           child: Stack(
                             children: [
                               Positioned(
-                                left: 0,
+                                left: 15,
                                 top: 36,
                                 child: Container(
-                                  width: 340,
+                                  width: 310,
                                   height: 63,
                                   decoration: ShapeDecoration(
                                     color: Color(0x33D9D9D9),
@@ -220,10 +225,10 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: 0,
+                                left: 15,
                                 top: 0,
                                 child: SizedBox(
-                                  width: 340,
+                                  width: 300,
                                   height: 28,
                                   child: Text(
                                     'Phone Number',
@@ -232,7 +237,7 @@ class LoginScreen extends StatelessWidget {
                                       fontSize: 20,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
-                                      height: 0.06,
+                                      height: 0,
                                     ),
                                   ),
                                 ),
@@ -250,7 +255,7 @@ class LoginScreen extends StatelessWidget {
                                       fontSize: 14,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
-                                      height: 0.09,
+                                      height: 0,
                                     ),
                                   ),
                                 ),
@@ -258,17 +263,17 @@ class LoginScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 24),
+                        const SizedBox(height: 20),
                         SizedBox(
                           width: 340,
                           height: 99,
                           child: Stack(
                             children: [
                               Positioned(
-                                left: 0,
+                                left: 15,
                                 top: 36,
                                 child: Container(
-                                  width: 340,
+                                  width: 310,
                                   height: 63,
                                   decoration: ShapeDecoration(
                                     color: Color(0x33D9D9D9),
@@ -281,25 +286,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: 30,
-                                top: 60,
-                                child: SizedBox(
-                                  width: 173,
-                                  height: 16,
-                                  child: Text(
-                                    'Enter Your Phone Number',
-                                    style: TextStyle(
-                                      color: Color(0xFFD3D3D3),
-                                      fontSize: 14,
-                                      fontFamily: 'Lato',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0.09,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 0,
+                                left: 15,
                                 top: 0,
                                 child: SizedBox(
                                   width: 340,
@@ -311,7 +298,25 @@ class LoginScreen extends StatelessWidget {
                                       fontSize: 20,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
-                                      height: 0.06,
+                                      height: 0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 30,
+                                top: 60,
+                                child: SizedBox(
+                                  width: 173,
+                                  height: 16,
+                                  child: Text(
+                                    'Enter Your Phone Number',
+                                    style: TextStyle(
+                                      color: Color(0xFFD3D3D3),
+                                      fontSize: 14,
+                                      fontFamily: 'Lato',
+                                      fontWeight: FontWeight.w400,
+                                      height: 0,
                                     ),
                                   ),
                                 ),
@@ -324,8 +329,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 93.50,
-                  top: 581,
+                  left: 107,
+                  top: 588,
                   child: SizedBox(
                     width: 154,
                     height: 69,
@@ -334,15 +339,15 @@ class LoginScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        Expanded(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                width: 69,
-                                height: 69,
+                                width: 59,
+                                height: 59,
                                 decoration: ShapeDecoration(
                                   color: Color(0xFFECECEC),
                                   shape: CircleBorder(
@@ -365,8 +370,8 @@ class LoginScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
-                                        image: NetworkImage(
-                                            "https://via.placeholder.com/32x32"),
+                                        image:
+                                            AssetImage("assets/facebook.png"),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
@@ -378,15 +383,15 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        SizedBox(
+                        Expanded(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                width: 69,
-                                height: 69,
+                                width: 59,
+                                height: 59,
                                 decoration: ShapeDecoration(
                                   color: Color(0xFFECECEC),
                                   shape: CircleBorder(
@@ -409,8 +414,7 @@ class LoginScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
-                                        image: NetworkImage(
-                                            "https://via.placeholder.com/24x24"),
+                                        image: AssetImage("assets/google.png"),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
