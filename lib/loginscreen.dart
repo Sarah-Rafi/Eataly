@@ -213,7 +213,7 @@ class LoginScreen extends StatelessWidget {
                                 top: 35,
                                 child: Container(
                                   width: 300,
-                                  height: 53,
+                                  height: 50,
                                   decoration: ShapeDecoration(
                                     color: Color(0x33D9D9D9),
                                     shape: RoundedRectangleBorder(
@@ -234,7 +234,7 @@ class LoginScreen extends StatelessWidget {
                                     'Phone Number',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 18,
+                                      fontSize: 15,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -270,11 +270,11 @@ class LoginScreen extends StatelessWidget {
                           child: Stack(
                             children: [
                               Positioned(
-                                left: 15,
-                                top: 36,
+                                left: 22.5,
+                                top: 35,
                                 child: Container(
-                                  width: 310,
-                                  height: 63,
+                                  width: 300,
+                                  height: 50,
                                   decoration: ShapeDecoration(
                                     color: Color(0x33D9D9D9),
                                     shape: RoundedRectangleBorder(
@@ -286,7 +286,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: 18,
+                                left: 22.5,
                                 top: 5,
                                 child: SizedBox(
                                   width: 340,
@@ -295,7 +295,7 @@ class LoginScreen extends StatelessWidget {
                                     'Password',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -305,7 +305,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               Positioned(
                                 left: 30,
-                                top: 60,
+                                top: 50,
                                 child: SizedBox(
                                   width: 173,
                                   height: 16,
@@ -430,19 +430,19 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 12,
-                  top: 500,
+                  left: 7,
+                  top: 490,
                   child: SizedBox(
                     width: 340,
                     height: 99,
                     child: Stack(
                       children: [
                         Positioned(
-                          left: 10,
+                          left: 22.5,
                           top: 0,
                           child: Container(
-                            width: 310,
-                            height: 63,
+                            width: 300,
+                            height: 50,
                             decoration: ShapeDecoration(
                               color: Color(0xFF00B287),
                               shape: RoundedRectangleBorder(
@@ -452,7 +452,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Positioned(
                           left: 138,
-                          top: 30,
+                          top: 25,
                           child: SizedBox(
                             width: 61,
                             height: 24,
