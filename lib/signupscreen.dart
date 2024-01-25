@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'main.dart';
-
-void main() {
-  runApp(MyApp());
-}
-class SignuPScreen extends StatelessWidget {
+class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +15,359 @@ class SignuPScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               color: Colors.black.withOpacity(0.6),
+            ),
+          ),
+          Container(
+            width: 432,
+            height: 932,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment(0.01, 1.00),
+                end: Alignment(-0.01, -1),
+                colors: [Colors.black, Colors.black.withOpacity(0.1)],
+              ),
+            ),
+          ),
+          // Existing Positioned widgets
+          Positioned(
+            top: 56,
+            left: (340 - 140) / 2,
+            child: SizedBox(
+              width: 150,
+              height: 100,
+              child: Image.asset(
+                'assets/eataly.png',
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 47,
+            top: 170,
+            child: SizedBox(
+              width: 262,
+              child: Text(
+                'Instant Table Reservations!',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontFamily: 'Forum',
+                  fontWeight: FontWeight.w400,
+                  height: 0.06,
+                ),
+              ),
+            ),
+          ),
+          // "Sign Up" Text widget
+          Positioned(
+            left: (340 - 100) / 2,
+            top: 230,
+            child: Text(
+              'Sign Up',
+              style: TextStyle(
+                color: Color(0xFF00ECB4),
+                fontSize: 32,
+                fontFamily: 'Lato',
+                fontWeight: FontWeight.w700,
+                height: 0.03,
+              ),
+            ),
+          ),
+          // First Stack
+          Positioned(
+            top: 265,
+            child: SizedBox(
+              width: 350,
+              height: 99,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 28,
+                    top: 35,
+                    child: Container(
+                      width: 300,
+                      height: 50,
+                      decoration: ShapeDecoration(
+                        color: Color(0x33D9D9D9),
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 1, color: Colors.white),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 28,
+                    top: 5,
+                    child: SizedBox(
+                      width: 300,
+                      height: 28,
+                      child: Text(
+                        'Name',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 35,
+                    top: 52,
+                    child: SizedBox(
+                      width: 173,
+                      height: 16,
+                      child: Text(
+                        'Enter Your Name',
+                        style: TextStyle(
+                          color: Color(0xFFD3D3D3),
+                          fontSize: 14,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Second Stack
+          Positioned(
+            top: 357,
+            child: SizedBox(
+              width: 350,
+              height: 99,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 28,
+                    top: 35,
+                    child: Container(
+                      width: 300,
+                      height: 50,
+                      decoration: ShapeDecoration(
+                        color: Color(0x33D9D9D9),
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 1, color: Colors.white),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 28,
+                    top: 5,
+                    child: SizedBox(
+                      width: 300,
+                      height: 28,
+                      child: Text(
+                        'Phone Number',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 35,
+                    top: 52,
+                    child: SizedBox(
+                      width: 173,
+                      height: 16,
+                      child: Text(
+                        'Enter Your Phone Number',
+                        style: TextStyle(
+                          color: Color(0xFFD3D3D3),
+                          fontSize: 14,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Third Stack
+          Positioned(
+            top: 447,
+            child: SizedBox(
+              width: 350,
+              height: 99,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 28,
+                    top: 35,
+                    child: Container(
+                      width: 300,
+                      height: 50,
+                      decoration: ShapeDecoration(
+                        color: Color(0x33D9D9D9),
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 1, color: Colors.white),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 28,
+                    top: 5,
+                    child: SizedBox(
+                      width: 300,
+                      height: 28,
+                      child: Text(
+                        'Password',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 35,
+                    top: 52,
+                    child: SizedBox(
+                      width: 173,
+                      height: 16,
+                      child: Text(
+                        'Enter Your Password',
+                        style: TextStyle(
+                          color: Color(0xFFD3D3D3),
+                          fontSize: 14,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Fourth Stack
+          Positioned(
+            top: 539,
+            child: SizedBox(
+              width: 350,
+              height: 99,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 28,
+                    top: 35,
+                    child: Container(
+                      width: 300,
+                      height: 50,
+                      decoration: ShapeDecoration(
+                        color: Color(0x33D9D9D9),
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 1, color: Colors.white),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 28,
+                    top: 5,
+                    child: SizedBox(
+                      width: 300,
+                      height: 28,
+                      child: Text(
+                        'Confirm Password',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 35,
+                    top: 52,
+                    child: SizedBox(
+                      width: 173,
+                      height: 16,
+                      child: Text(
+                        'Re-enter Your Password',
+                        style: TextStyle(
+                          color: Color(0xFFD3D3D3),
+                          fontSize: 14,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Fifth Stack
+          Positioned(
+            left: 7,
+            top: 650,
+            child: SizedBox(
+              width: 340,
+              height: 99,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 22.5,
+                    top: 0,
+                    child: Container(
+                      width: 300,
+                      height: 50,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFF00B287),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 138,
+                    top: 24,
+                    child: SizedBox(
+                      width: 61,
+                      height: 24,
+                      child: Text(
+                        'Log In',
+                        style: TextStyle(
+                          color: Color(0xFFD3D3D3),
+                          fontSize: 20,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w700,
+                          height: 0.06,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

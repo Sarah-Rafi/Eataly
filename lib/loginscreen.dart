@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
 import 'signupscreen.dart';
 
 void main() {
   runApp(MyApp());
 }
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LoginScreen(),
+    );
+  }
+}
+
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -115,35 +125,44 @@ class LoginScreen extends StatelessWidget {
                 Positioned(
                   left: 34,
                   top: 682,
-                  child: Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'First time here?',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Lato',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
+                  child: InkWell(
+                    onTap: () {
+                      // Navigate to SignupScreen when "Sign Up for an account" is pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignupScreen()),
+                      );
+                    },
+                    child: Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'First time here?',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'Lato',
+                              fontWeight: FontWeight.w500,
+                              height: 0,
+                            ),
                           ),
-                        ),
-                        TextSpan(
-                          text: ' Sign Up for an account',
-                          style: TextStyle(
-                            color: Color(0xFF00ECB4),
-                            fontSize: 16,
-                            fontFamily: 'Lato',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
+                          TextSpan(
+                            text: ' Sign Up for an account',
+                            style: TextStyle(
+                              color: Color(0xFF00ECB4),
+                              fontSize: 16,
+                              fontFamily: 'Lato',
+                              fontWeight: FontWeight.w500,
+                              height: 0,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Positioned(
-                  top: 55,
+                  top: 56,
                   left: (340 - 140) / 2,
                   child: SizedBox(
                     width: 150,
@@ -225,7 +244,7 @@ class LoginScreen extends StatelessWidget {
                                     'Phone Number',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 15,
+                                      fontSize: 18,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -235,7 +254,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               Positioned(
                                 left: 30,
-                                top: 50,
+                                top: 52,
                                 child: SizedBox(
                                   width: 173,
                                   height: 16,
@@ -286,7 +305,7 @@ class LoginScreen extends StatelessWidget {
                                     'Password',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 15,
+                                      fontSize: 18,
                                       fontFamily: 'Lato',
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -296,7 +315,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               Positioned(
                                 left: 30,
-                                top: 50,
+                                top: 52,
                                 child: SizedBox(
                                   width: 173,
                                   height: 16,
@@ -443,7 +462,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Positioned(
                           left: 138,
-                          top: 25,
+                          top: 24,
                           child: SizedBox(
                             width: 61,
                             height: 24,
