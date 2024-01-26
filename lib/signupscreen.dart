@@ -61,13 +61,13 @@ class SignupScreen extends StatelessWidget {
           ),
           // "Sign Up" Text widget
           Positioned(
-            left: (340 - 100) / 2,
+            left: (340 - 80) / 2,
             top: 230,
             child: Text(
               'Sign Up',
               style: TextStyle(
                 color: Color(0xFF00ECB4),
-                fontSize: 32,
+                fontSize: 26,
                 fontFamily: 'Lato',
                 fontWeight: FontWeight.w700,
                 height: 0.03,
@@ -107,7 +107,7 @@ class SignupScreen extends StatelessWidget {
                         'Name',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w400,
                           height: 0,
@@ -170,7 +170,7 @@ class SignupScreen extends StatelessWidget {
                         'Phone Number',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w400,
                           height: 0,
@@ -233,7 +233,7 @@ class SignupScreen extends StatelessWidget {
                         'Password',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w400,
                           height: 0,
@@ -296,7 +296,7 @@ class SignupScreen extends StatelessWidget {
                         'Confirm Password',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w400,
                           height: 0,
@@ -354,11 +354,10 @@ class SignupScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 61,
                       height: 24,
-                      child: Text(
-                        'Log In',
+                      child: Text('Sign Up',
                         style: TextStyle(
                           color: Color(0xFFD3D3D3),
-                          fontSize: 20,
+                          fontSize: 17,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w700,
                           height: 0.06,
