@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'otpscreen.dart';
 
 class SignupScreen extends StatelessWidget {
   @override
@@ -28,7 +29,6 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Existing Positioned widgets
           Positioned(
             top: 56,
             left: (340 - 140) / 2,
@@ -59,7 +59,6 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          // "Sign Up" Text widget
           Positioned(
             left: (340 - 80) / 2,
             top: 230,
@@ -74,7 +73,6 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          // First Stack
           Positioned(
             top: 265,
             child: SizedBox(
@@ -137,7 +135,6 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Second Stack
           Positioned(
             top: 357,
             child: SizedBox(
@@ -200,7 +197,6 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Third Stack
           Positioned(
             top: 447,
             child: SizedBox(
@@ -263,7 +259,6 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Fourth Stack
           Positioned(
             top: 539,
             child: SizedBox(
@@ -326,7 +321,6 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Fifth Stack
           Positioned(
             left: 7,
             top: 650,
@@ -338,13 +332,21 @@ class SignupScreen extends StatelessWidget {
                   Positioned(
                     left: 22.5,
                     top: 0,
-                    child: Container(
-                      width: 300,
-                      height: 50,
-                      decoration: ShapeDecoration(
-                        color: Color(0xFF00B287),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => OtpScreen()),
+                        );
+                      },
+                      child: Container(
+                        width: 300,
+                        height: 50,
+                        decoration: ShapeDecoration(
+                          color: Color(0xFF00B287),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                        ),
                       ),
                     ),
                   ),
@@ -354,7 +356,8 @@ class SignupScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 61,
                       height: 24,
-                      child: Text('Sign Up',
+                      child: Text(
+                        'Sign Up',
                         style: TextStyle(
                           color: Color(0xFFD3D3D3),
                           fontSize: 17,

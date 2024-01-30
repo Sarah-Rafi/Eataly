@@ -28,7 +28,14 @@ flutter:
     - assets/backgroundimage.png
     - assets/facebook.png
     - assets/google.png
+    - assets/search.png
+    - assets/bagh.png
+    - assets/baghh.png
+    - assets/junoon.png
     
+
+
+
 
   fonts:
     - family: Forum
