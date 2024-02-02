@@ -32,8 +32,9 @@ flutter:
     - assets/bagh.png
     - assets/baghh.png
     - assets/junoon.png
-    
-
+    - assets/arrowleft.png
+    - assets/cross.png
+    - assets/clock.png
 
 
 
