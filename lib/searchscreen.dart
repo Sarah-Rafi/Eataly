@@ -7,7 +7,6 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          // Your existing code
           Container(
             width: 390,
             height: 115,
@@ -34,7 +33,6 @@ class SearchScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    // Navigate to HomeScreen when the arrow left image is pressed
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
                         builder: (context) => HomeScreen(),
@@ -125,8 +123,6 @@ class SearchScreen extends StatelessWidget {
               ],
             ),
           ),
-
-          // New Figma code
           SizedBox(
             width: 300,
             height: 155,
@@ -173,12 +169,11 @@ class SearchScreen extends StatelessWidget {
                                     decoration: BoxDecoration(),
                                     child: Stack(children: [
                                       Image.asset(
-                                        'assets/clock.png', // Replace with the actual image path
+                                        'assets/clock.png',
                                         width: 24,
                                         height: 24,
                                         fit: BoxFit.fill,
                                       ),
-                                      // ... Your stack content
                                     ]),
                                   ),
                                   const SizedBox(width: 16),
@@ -208,12 +203,11 @@ class SearchScreen extends StatelessWidget {
                                     height: 10,
                                     child: Stack(children: [
                                       Image.asset(
-                                        'assets/cross.png', // Replace with the actual image path
+                                        'assets/cross.png',
                                         width: 24,
                                         height: 24,
                                         fit: BoxFit.fill,
                                       ),
-                                      // ... Your stack content
                                     ]),
                                   ),
                                 ],
@@ -243,12 +237,11 @@ class SearchScreen extends StatelessWidget {
                                     decoration: BoxDecoration(),
                                     child: Stack(children: [
                                       Image.asset(
-                                        'assets/clock.png', // Replace with the actual image path
+                                        'assets/clock.png',
                                         width: 24,
                                         height: 24,
                                         fit: BoxFit.fill,
                                       ),
-                                      // ... Your stack content
                                     ]),
                                   ),
                                   const SizedBox(width: 16),
@@ -278,12 +271,11 @@ class SearchScreen extends StatelessWidget {
                                     height: 10,
                                     child: Stack(children: [
                                       Image.asset(
-                                        'assets/cross.png', // Replace with the actual image path
+                                        'assets/cross.png',
                                         width: 24,
                                         height: 24,
                                         fit: BoxFit.fill,
                                       ),
-                                      // ... Your stack content
                                     ]),
                                   ),
                                 ],
@@ -313,12 +305,11 @@ class SearchScreen extends StatelessWidget {
                                     decoration: BoxDecoration(),
                                     child: Stack(children: [
                                       Image.asset(
-                                        'assets/clock.png', // Replace with the actual image path
+                                        'assets/clock.png',
                                         width: 24,
                                         height: 24,
                                         fit: BoxFit.fill,
                                       ),
-                                      // ... Your stack content
                                     ]),
                                   ),
                                   const SizedBox(width: 16),
@@ -371,12 +362,11 @@ class SearchScreen extends StatelessWidget {
                                     height: 10,
                                     child: Stack(children: [
                                       Image.asset(
-                                        'assets/cross.png', // Replace with the actual image path
+                                        'assets/cross.png',
                                         width: 24,
                                         height: 24,
                                         fit: BoxFit.fill,
                                       ),
-                                      // ... Your stack content
                                     ]),
                                   ),
                                 ],
