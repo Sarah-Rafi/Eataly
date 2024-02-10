@@ -381,7 +381,78 @@ class SearchScreen extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            width: double.infinity,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Trending Searches',
+                  style: TextStyle(
+                    color: Color(0xFF3E2A20),
+                    fontSize: 16,
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                trendingOvalContainer('Avari Dine In Experience'),
+                trendingOvalContainer('Masalawala'),
+                trendingOvalContainer('Balcony Restaurant'),
+                trendingOvalContainer('Penthouse'),
+                trendingOvalContainer('MONAL'),
+                trendingOvalContainer('Arcadian'),
+                trendingOvalContainer('LILY By Deja'),
+                trendingOvalContainer('London Courtyard'),
+                trendingOvalContainer('Dahlia Cafe'),
+                trendingOvalContainer('Theatre Cafe'),
+                trendingOvalContainer('Tuscany'),
+              ],
+            ),
+          ),
         ],
+      ),
+    );
+  }
+
+  Widget trendingOvalContainer(String text) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(width: 1, color: Color(0xFFCFD4DC)),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x0C101828),
+            blurRadius: 2,
+            offset: Offset(0, 1),
+            spreadRadius: 0,
+          )
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: Color(0xFF222222),
+                  fontSize: 14,
+                  fontFamily: 'Lato',
+                  fontWeight: FontWeight.w500,
+                  height: 0.09,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

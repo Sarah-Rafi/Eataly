@@ -127,7 +127,6 @@ class LoginScreen extends StatelessWidget {
                   top: 682,
                   child: InkWell(
                     onTap: () {
-                      // Navigate to SignupScreen when "Sign Up for an account" is pressed
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => SignupScreen()),

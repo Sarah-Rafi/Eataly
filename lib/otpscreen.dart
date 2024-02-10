@@ -176,7 +176,6 @@ class OtpScreen extends StatelessWidget {
                     top: 0,
                     child: GestureDetector(
                       onTap: () {
-                        // Navigate to the HomeScreen when "Get Started" is pressed
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => HomeScreen()),
