@@ -134,7 +134,7 @@ class SearchScreen extends StatelessWidget {
                 Text(
                   'Recent Searches',
                   style: TextStyle(
-                    color: Color(0xFF3E2A20),
+                    color:  Color(0xFF00B288),
                     fontSize: 16,
                     fontFamily: 'Lato',
                     fontWeight: FontWeight.w700,
@@ -382,7 +382,8 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: double.infinity,
+            width: 300,
+            height: 334,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -391,14 +392,14 @@ class SearchScreen extends StatelessWidget {
                 Text(
                   'Trending Searches',
                   style: TextStyle(
-                    color: Color(0xFF3E2A20),
+                    color:  Color(0xFF00B288),
                     fontSize: 16,
                     fontFamily: 'Lato',
                     fontWeight: FontWeight.w700,
-                    height: 0,
+                    height: 2,
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 5),
                 trendingOvalContainer('Avari Dine In Experience'),
                 trendingOvalContainer('Masalawala'),
                 trendingOvalContainer('Balcony Restaurant'),
@@ -420,11 +421,11 @@ class SearchScreen extends StatelessWidget {
 
   Widget trendingOvalContainer(String text) {
     return Container(
-      width: double.infinity,
+      width: 200,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(width: 1, color: Color(0xFFCFD4DC)),
+        borderRadius: BorderRadius.circular(50),
+        border: Border.all(width: 5, color: Color(0xFFCFD4DC)),
         boxShadow: [
           BoxShadow(
             color: Color(0x0C101828),

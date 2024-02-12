@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homescreen.dart'; // Import your HomeScreen file
+import 'homescreen.dart';
 
 class OtpScreen extends StatelessWidget {
   @override
