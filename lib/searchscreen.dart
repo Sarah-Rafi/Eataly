@@ -1,58 +1,65 @@
 import 'package:flutter/material.dart';
+import 'savedscreen.dart';
 import 'homescreen.dart';
 
 class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            width: 390,
-            height: 115,
-            padding: const EdgeInsets.only(
-              top: 42,
-              left: 20,
-              right: 24,
-              bottom: 10,
+      body: Column(children: [
+        Container(
+          width: 390,
+          height: 115,
+          padding: const EdgeInsets.only(
+            top: 42,
+            left: 20,
+            right: 24,
+            bottom: 10,
+          ),
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.800000011920929),
+            border: Border(
+              left: BorderSide(color: Color(0xFFD0D5DD)),
+              top: BorderSide(color: Color(0xFFD0D5DD)),
+              right: BorderSide(color: Color(0xFFD0D5DD)),
+              bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
             ),
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.800000011920929),
-              border: Border(
-                left: BorderSide(color: Color(0xFFD0D5DD)),
-                top: BorderSide(color: Color(0xFFD0D5DD)),
-                right: BorderSide(color: Color(0xFFD0D5DD)),
-                bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
-              ),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    width: 24,
-                    height: 24,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/arrowleft.png'),
-                        fit: BoxFit.fill,
-                      ),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: 24,
+                  height: 24,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/arrowleft.png'),
+                      fit: BoxFit.fill,
                     ),
                   ),
                 ),
-                const SizedBox(width: 16),
-                Expanded(
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SavedScreen()),
+                    );
+                  },
                   child: Container(
                     height: 44,
                     padding: const EdgeInsets.symmetric(
@@ -120,222 +127,210 @@ class SearchScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-          SizedBox(
-            width: 300,
-            height: 155,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Recent Searches',
-                  style: TextStyle(
-                    color:  Color(0xFF00B288),
-                    fontSize: 16,
-                    fontFamily: 'Lato',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
+        ),
+        SizedBox(
+          width: 300,
+          height: 155,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Recent Searches',
+                style: TextStyle(
+                  color: Color(0xFF00B288),
+                  fontSize: 16,
+                  fontFamily: 'Lato',
+                  fontWeight: FontWeight.w700,
+                  height: 0,
                 ),
-                const SizedBox(height: 16),
-                SizedBox(
-                  height: 120,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: double.infinity,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: 24,
-                                    height: 24,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(),
-                                    child: Stack(children: [
-                                      Image.asset(
-                                        'assets/clock.png',
-                                        width: 24,
-                                        height: 24,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ]),
-                                  ),
-                                  const SizedBox(width: 16),
-                                  Text(
-                                    'Aylanto Cafe',
-                                    style: TextStyle(
-                                      color: Color(0xFF222222),
-                                      fontSize: 14,
-                                      fontFamily: 'Lato',
-                                      fontWeight: FontWeight.w500,
-                                      height: 0.09,
+              ),
+              const SizedBox(height: 16),
+              SizedBox(
+                height: 120,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 24,
+                                  height: 24,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(),
+                                  child: Stack(children: [
+                                    Image.asset(
+                                      'assets/clock.png',
+                                      width: 24,
+                                      height: 24,
+                                      fit: BoxFit.fill,
                                     ),
+                                  ]),
+                                ),
+                                const SizedBox(width: 16),
+                                Text(
+                                  'Aylanto Cafe',
+                                  style: TextStyle(
+                                    color: Color(0xFF222222),
+                                    fontSize: 14,
+                                    fontFamily: 'Lato',
+                                    fontWeight: FontWeight.w500,
+                                    height: 0.09,
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                            const SizedBox(width: 16),
-                            Container(
-                              padding: const EdgeInsets.all(4),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    width: 10,
-                                    height: 10,
-                                    child: Stack(children: [
-                                      Image.asset(
-                                        'assets/cross.png',
-                                        width: 24,
-                                        height: 24,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ]),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: 24,
-                                    height: 24,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(),
-                                    child: Stack(children: [
-                                      Image.asset(
-                                        'assets/clock.png',
-                                        width: 24,
-                                        height: 24,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ]),
-                                  ),
-                                  const SizedBox(width: 16),
-                                  Text(
-                                    'Junoon Restaurant',
-                                    style: TextStyle(
-                                      color: Color(0xFF222222),
-                                      fontSize: 14,
-                                      fontFamily: 'Lato',
-                                      fontWeight: FontWeight.w500,
-                                      height: 0.09,
+                          ),
+                          const SizedBox(width: 16),
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 10,
+                                  height: 10,
+                                  child: Stack(children: [
+                                    Image.asset(
+                                      'assets/cross.png',
+                                      width: 24,
+                                      height: 24,
+                                      fit: BoxFit.fill,
                                     ),
-                                  ),
-                                ],
-                              ),
+                                  ]),
+                                ),
+                              ],
                             ),
-                            const SizedBox(width: 16),
-                            Container(
-                              padding: const EdgeInsets.all(4),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    width: 10,
-                                    height: 10,
-                                    child: Stack(children: [
-                                      Image.asset(
-                                        'assets/cross.png',
-                                        width: 24,
-                                        height: 24,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ]),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 16),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: 24,
-                                    height: 24,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(),
-                                    child: Stack(children: [
-                                      Image.asset(
-                                        'assets/clock.png',
-                                        width: 24,
-                                        height: 24,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ]),
+                    ),
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      width: double.infinity,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 24,
+                                  height: 24,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(),
+                                  child: Stack(children: [
+                                    Image.asset(
+                                      'assets/clock.png',
+                                      width: 24,
+                                      height: 24,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ]),
+                                ),
+                                const SizedBox(width: 16),
+                                Text(
+                                  'Junoon Restaurant',
+                                  style: TextStyle(
+                                    color: Color(0xFF222222),
+                                    fontSize: 14,
+                                    fontFamily: 'Lato',
+                                    fontWeight: FontWeight.w500,
+                                    height: 0.09,
                                   ),
-                                  const SizedBox(width: 16),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(
-                                        width: 220,
-                                        height: 05,
-                                        child: Text(
-                                          'Bagh Restaurant - The Ultimate',
-                                          style: TextStyle(
-                                            color: Color(0xFF222222),
-                                            fontSize: 14,
-                                            fontFamily: 'Lato',
-                                            fontWeight: FontWeight.w500,
-                                            height: 0.10,
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(height: 18),
-                                      Text(
-                                        'Desi Experience',
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 10,
+                                  height: 10,
+                                  child: Stack(children: [
+                                    Image.asset(
+                                      'assets/cross.png',
+                                      width: 24,
+                                      height: 24,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ]),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      width: double.infinity,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 24,
+                                  height: 24,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(),
+                                  child: Stack(children: [
+                                    Image.asset(
+                                      'assets/clock.png',
+                                      width: 24,
+                                      height: 24,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ]),
+                                ),
+                                const SizedBox(width: 16),
+                                Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 220,
+                                      height: 05,
+                                      child: Text(
+                                        'Bagh Restaurant - The Ultimate',
                                         style: TextStyle(
                                           color: Color(0xFF222222),
                                           fontSize: 14,
@@ -344,47 +339,59 @@ class SearchScreen extends StatelessWidget {
                                           height: 0.10,
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 16),
-                            Container(
-                              padding: const EdgeInsets.all(4),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    width: 10,
-                                    height: 10,
-                                    child: Stack(children: [
-                                      Image.asset(
-                                        'assets/cross.png',
-                                        width: 24,
-                                        height: 24,
-                                        fit: BoxFit.fill,
+                                    ),
+                                    const SizedBox(height: 18),
+                                    Text(
+                                      'Desi Experience',
+                                      style: TextStyle(
+                                        color: Color(0xFF222222),
+                                        fontSize: 14,
+                                        fontFamily: 'Lato',
+                                        fontWeight: FontWeight.w500,
+                                        height: 0.10,
                                       ),
-                                    ]),
-                                  ),
-                                ],
-                              ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                          const SizedBox(width: 16),
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 10,
+                                  height: 10,
+                                  child: Stack(children: [
+                                    Image.asset(
+                                      'assets/cross.png',
+                                      width: 24,
+                                      height: 24,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ]),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-          SizedBox(
-            width: 300,
-            height: 334,
-            child: Column(
+        ),
+        SizedBox(
+          width: 300,
+          height: 334,
+          child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -392,69 +399,81 @@ class SearchScreen extends StatelessWidget {
                 Text(
                   'Trending Searches',
                   style: TextStyle(
-                    color:  Color(0xFF00B288),
+                    color: Color(0xFF00B288),
                     fontSize: 16,
                     fontFamily: 'Lato',
                     fontWeight: FontWeight.w700,
                     height: 2,
                   ),
                 ),
-                const SizedBox(height: 5),
-                trendingOvalContainer('Avari Dine In Experience'),
-                trendingOvalContainer('Masalawala'),
-                trendingOvalContainer('Balcony Restaurant'),
-                trendingOvalContainer('Penthouse'),
-                trendingOvalContainer('MONAL'),
-                trendingOvalContainer('Arcadian'),
-                trendingOvalContainer('LILY By Deja'),
-                trendingOvalContainer('London Courtyard'),
-                trendingOvalContainer('Dahlia Cafe'),
-                trendingOvalContainer('Theatre Cafe'),
-                trendingOvalContainer('Tuscany'),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget trendingOvalContainer(String text) {
-    return Container(
-      width: 200,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(50),
-        border: Border.all(width: 5, color: Color(0xFFCFD4DC)),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0x0C101828),
-            blurRadius: 2,
-            offset: Offset(0, 1),
-            spreadRadius: 0,
-          )
-        ],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          children: [
-            const SizedBox(width: 10),
-            Expanded(
-              child: Text(
-                text,
-                style: TextStyle(
-                  color: Color(0xFF222222),
-                  fontSize: 14,
-                  fontFamily: 'Lato',
-                  fontWeight: FontWeight.w500,
-                  height: 0.09,
+                SizedBox(
+                  width: 304,
+                  height: 33,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 150,
+                        height: 33,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // Add text widget here
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 150,
+                        height: 33,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // Add text widget her
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ),
-          ],
+              ]),
         ),
-      ),
+      ]),
     );
   }
 }

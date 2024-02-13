@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'partyscreen.dart';
 
 class SavedScreen extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class SavedScreen extends StatelessWidget {
           children: [
             Container(
               width: 390,
-              height: 2934,
+              height: 180,
               clipBehavior: Clip.antiAlias,
               decoration: ShapeDecoration(
                 color: Colors.white,
@@ -88,6 +89,90 @@ class SavedScreen extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Container(
+              width: 180,
+              height: 200,
+              margin: EdgeInsets.only(top: 0, left: 0),
+              child: Container(
+                width: 200,
+                height: 200,
+                margin: EdgeInsets.only(left: 0),
+                child: Image(
+                  image: AssetImage("assets/fastfood.png"),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            SizedBox(height: 8),
+            Container(
+              width: 291,
+              height: 52,
+              margin: EdgeInsets.only(top: 8),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 300,
+                    height: 22,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(),
+                    child: Text(
+                      'You haven’t saved any items',
+                      style: TextStyle(
+                        fontFamily: 'Lato',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 300,
+                    height: 22,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(),
+                    child: Text(
+                      'Return to Home to Explore and Save',
+                      style: TextStyle(
+                        fontFamily: 'Lato',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF888888),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                // Navigate to PartyScreen when pressed
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PartyScreen()),
+                );
+              },
+              child: Container(
+                width: 155,
+                height: 44,
+                padding: EdgeInsets.fromLTRB(12, 10, 12, 10),
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF00B288),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(
+                  child: Text(
+                    'Return To Home',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
