@@ -9,7 +9,7 @@ class PartyScreen extends StatelessWidget {
           children: [
             Container(
               width: 390,
-              height: 500,
+              height: 700,
               clipBehavior: Clip.antiAlias,
               decoration: ShapeDecoration(
                 color: Colors.white,
@@ -89,8 +89,8 @@ class PartyScreen extends StatelessWidget {
                   ),
                   Container(
                     width: 322,
-                    height: 126,
-                    margin: const EdgeInsets.only(top: 5, left: 5, right: 24),
+                    height: 95,
+                    margin: const EdgeInsets.only(top: 15, left: 5, right: 24),
                     child: Center(
                       child: RichText(
                         textAlign: TextAlign.left,
@@ -112,17 +112,69 @@ class PartyScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Container(
-                    width: 229,
-                    height: 229,
-                    margin: const EdgeInsets.only(
-                        bottom: 10),
+                    width: 250,
+                    height: 250,
+                    margin: const EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(
-                            "assets/objects.png"),
+                        image: AssetImage("assets/objects.png"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Container(
+                    width: 291,
+                    height: 104,
+                    margin: EdgeInsets.only(top: 15),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 300,
+                          height: 30,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(),
+                          child: Text(
+                            'You haven’t saved any items',
+                            style: TextStyle(
+                              fontFamily: 'Lato',
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Container(
+                          width: 150,
+                          height: 44,
+                          padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Color(0xFF00B288),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Add Friends',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Image.asset('assets/addfriends.png',
+                                width: 30,
+                                height: 30,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

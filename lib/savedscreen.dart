@@ -148,7 +148,6 @@ class SavedScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                // Navigate to PartyScreen when pressed
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => PartyScreen()),
