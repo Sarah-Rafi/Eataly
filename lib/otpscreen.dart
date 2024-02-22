@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homescreen.dart';
+import 'searchscreen.dart';
 
 class OtpScreen extends StatelessWidget {
   @override
@@ -178,7 +178,7 @@ class OtpScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                          MaterialPageRoute(builder: (context) => SearchScreen()),
                         );
                       },
                       child: Container(

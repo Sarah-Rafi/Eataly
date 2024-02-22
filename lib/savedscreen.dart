@@ -53,35 +53,48 @@ class SavedScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               SizedBox(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Good Morning',
-                                      style: TextStyle(
-                                        color: Color(0xFF222222),
-                                        fontSize: 14,
-                                        fontFamily: 'Lato',
-                                        fontWeight: FontWeight.w500,
-                                        height: 0,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 2),
-                                    Text(
-                                      'John Doe',
-                                      style: TextStyle(
-                                        color: Color(0xFF222222),
-                                        fontSize: 22,
-                                        fontFamily: 'Lato',
-                                        fontWeight: FontWeight.w600,
-                                        height: 0,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+  child: Row(
+    mainAxisSize: MainAxisSize.min,
+    mainAxisAlignment: MainAxisAlignment.start,
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Good Morning',
+            style: TextStyle(
+              color: Color(0xFF222222),
+              fontSize: 14,
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.w500,
+              height: 1.0, // Adjust the height as needed
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            'John Doe',
+            style: TextStyle(
+              color: Color(0xFF222222),
+              fontSize: 22,
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.w600,
+              height: 1.0, // Adjust the height as needed
+            ),
+          ),
+        ],
+      ),
+      SizedBox(width: 190),
+      Image(
+        width: 24,
+        height: 24,
+        image: AssetImage('assets/notification.png'),
+      ),
+    ],
+  ),                             
+)
                             ],
                           ),
                         ),

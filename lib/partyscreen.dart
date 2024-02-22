@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'partydemoscreen.dart';
 
 class PartyScreen extends StatelessWidget {
   @override
@@ -45,45 +46,51 @@ class PartyScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          width: double.infinity,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Good Morning',
-                                      style: TextStyle(
-                                        color: Color(0xFF222222),
-                                        fontSize: 14,
-                                        fontFamily: 'Lato',
-                                        fontWeight: FontWeight.w500,
-                                        height: 0,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 2),
-                                    Text(
-                                      'John Doe',
-                                      style: TextStyle(
-                                        color: Color(0xFF222222),
-                                        fontSize: 22,
-                                        fontFamily: 'Lato',
-                                        fontWeight: FontWeight.w600,
-                                        height: 0,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+  width: double.infinity,
+  child: Row(
+    mainAxisSize: MainAxisSize.min,
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      SizedBox(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Good Morning',
+              style: TextStyle(
+                color: Color(0xFF222222),
+                fontSize: 14,
+                fontFamily: 'Lato',
+                fontWeight: FontWeight.w500,
+                height: 0,
+              ),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              'John Doe',
+              style: TextStyle(
+                color: Color(0xFF222222),
+                fontSize: 22,
+                fontFamily: 'Lato',
+                fontWeight: FontWeight.w600,
+                height: 0,
+              ),
+            ),
+          ],
+        ),
+      ),
+      SizedBox(width: 190),
+      Image(
+        width: 24,
+        height: 24,
+        image: AssetImage('assets/notification.png'),
+      ),
+    ],
+  ),
+)                   
                       ],
                     ),
                   ),
@@ -156,22 +163,31 @@ class PartyScreen extends StatelessWidget {
                             color: Color(0xFF00B288),
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Add Friends',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => PartyDemoScreen()),
+                              );
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Add Friends',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                              Image.asset('assets/addfriends.png',
-                                width: 30,
-                                height: 30,
-                              ),
-                            ],
+                                Image.asset(
+                                  'assets/addfriends.png',
+                                  width: 30,
+                                  height: 30,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],

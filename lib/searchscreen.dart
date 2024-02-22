@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'savedscreen.dart';
-import 'homescreen.dart';
 
 class SearchScreen extends StatelessWidget {
   @override
@@ -35,7 +34,7 @@ class SearchScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => HomeScreen(),
+                      builder: (context) => SavedScreen(),
                     ),
                   );
                 },
@@ -133,7 +132,7 @@ class SearchScreen extends StatelessWidget {
         ),
         SizedBox(
           width: 300,
-          height: 155,
+          height: 160,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -408,15 +407,15 @@ class SearchScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   width: 304,
-                  height: 33,
+                  height: 70,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
-                        width: 150,
-                        height: 33,
+                        width: 178,
+                        height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
@@ -435,14 +434,25 @@ class SearchScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              // Add text widget here
+                              Text(
+      'Avari Dine In Experience',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
                             ],
                           ),
                         ),
                       ),
                       SizedBox(
-                        width: 150,
-                        height: 33,
+                        width: 110,
+                        height: 40,
                         child: Container(
                           padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
                           decoration: BoxDecoration(
@@ -463,6 +473,410 @@ class SearchScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
+                              Text(
+      'Masalawala',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                              // Add text widget her
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 264,
+                  height: 45,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 150,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'Balcony Restaurant',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 102,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'Penthouse',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                              // Add text widget her
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 304,
+                  height: 70,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 75,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'MONAL',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 90,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'Arcadian',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                              // Add text widget her
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 112,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'LILY By Deja',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                              // Add text widget her
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 260,
+                  height: 45,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 140,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'London Courtyard',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 108,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'Dahlia Cafe',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                              // Add text widget her
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 210,
+                  height: 70,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 108,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'Theatre Cafe',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 88,
+                        height: 40,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              color: Color(0xFFD0D5DD),
+                              width: 1,
+                            ),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFFFFFFFF),
+                                Color(0xFFFFFFFF),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+      'Tuscany',
+      style: TextStyle(
+        fontFamily: 'Lato',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        height: 1.3, // This is equivalent to line height
+        letterSpacing: 0.0,
+        color: Color(0xFF222222),
+      ),
+      textAlign: TextAlign.left,
+                              ),
                               // Add text widget her
                             ],
                           ),
