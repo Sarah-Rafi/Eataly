@@ -192,20 +192,16 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            left: 79.93,
-                            top: 33.50,
-                            child: Transform(
-                              transform: Matrix4.identity()
-                                ..translate(0.0, 0.0)
-                                ..rotateZ(-0.05),
-                              child: Transform(
-                                transform: Matrix4.identity()
-                                  ..translate(0.0, 0.0)
-                                  ..rotateZ(-0.05),
-                                child: SvgPicture.asset(
-                                  'assets/images/biryani.png', // Replace with your SVG file path
-                                  width: 194.23,
-                                  height: 129.36,
+                            left: 60,
+                            top: 16,
+                            child: Container(
+                              width: 194,
+                              height: 129,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/biryani.png'),
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
@@ -315,15 +311,15 @@ class Home extends StatelessWidget {
                               ),
                             ),
                             Positioned(
-                              left: 93,
+                              left: 60,
                               top: 16,
                               child: Container(
-                                width: 226,
-                                height: 163,
+                                width: 194,
+                                height: 129,
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image: NetworkImage(
-                                        "https://via.placeholder.com/226x163"),
+                                    image:
+                                        AssetImage('assets/images/biryani.png'),
                                     fit: BoxFit.fill,
                                   ),
                                 ),

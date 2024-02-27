@@ -163,7 +163,10 @@ class Reviews extends StatelessWidget {
           ],
         ),
       ),
-      const Text(
+      const Padding(
+        padding: EdgeInsets.only(
+            top: 24, left: 24), // Add 24px top margin and 8px bottom padding
+        child: Text(
         'Reviews',
         style: TextStyle(
           color: Color(0xFF00B288),
@@ -173,15 +176,14 @@ class Reviews extends StatelessWidget {
           height: 0,
         ),
       ),
+      ),
       Container(
+        margin: const EdgeInsets.only(left: 24, right: 24),
         width: 342,
         height: 160,
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: const BoxDecoration(
           border: Border(
-            left: BorderSide(color: Color(0xFFD0D5DD)),
-            top: BorderSide(color: Color(0xFFD0D5DD)),
-            right: BorderSide(color: Color(0xFFD0D5DD)),
             bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
           ),
         ),
@@ -224,8 +226,7 @@ class Reviews extends StatelessWidget {
                             height: 44,
                             decoration: ShapeDecoration(
                               image: const DecorationImage(
-                                image: NetworkImage(
-                                    "https://via.placeholder.com/44x44"),
+                                image: AssetImage('assets/images/person1.png'),
                                 fit: BoxFit.fill,
                               ),
                               shape: RoundedRectangleBorder(
@@ -384,14 +385,12 @@ class Reviews extends StatelessWidget {
         ),
       ),
       Container(
+        margin: const EdgeInsets.only(left: 24, right: 24),
         width: 342,
         height: 160,
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: const BoxDecoration(
           border: Border(
-            left: BorderSide(color: Color(0xFFD0D5DD)),
-            top: BorderSide(color: Color(0xFFD0D5DD)),
-            right: BorderSide(color: Color(0xFFD0D5DD)),
             bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
           ),
         ),
@@ -434,8 +433,7 @@ class Reviews extends StatelessWidget {
                             height: 44,
                             decoration: ShapeDecoration(
                               image: const DecorationImage(
-                                image: NetworkImage(
-                                    "https://via.placeholder.com/44x44"),
+                                image: AssetImage('assets/images/person2.png'),
                                 fit: BoxFit.cover,
                               ),
                               shape: RoundedRectangleBorder(
@@ -586,7 +584,7 @@ class Reviews extends StatelessWidget {
                   fontSize: 14,
                   fontFamily: 'Lato',
                   fontWeight: FontWeight.w400,
-                  height: 0.10,
+                  height: 1.4,
                 ),
               ),
             ),
@@ -594,14 +592,12 @@ class Reviews extends StatelessWidget {
         ),
       ),
       Container(
+        margin: const EdgeInsets.only(left: 24, right: 24),
         width: 342,
         height: 160,
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: const BoxDecoration(
           border: Border(
-            left: BorderSide(color: Color(0xFFD0D5DD)),
-            top: BorderSide(color: Color(0xFFD0D5DD)),
-            right: BorderSide(color: Color(0xFFD0D5DD)),
             bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
           ),
         ),
@@ -644,8 +640,7 @@ class Reviews extends StatelessWidget {
                             height: 44,
                             decoration: ShapeDecoration(
                               image: const DecorationImage(
-                                image: NetworkImage(
-                                    "https://via.placeholder.com/44x44"),
+                                image: AssetImage('assets/images/person3.png'),
                                 fit: BoxFit.fill,
                               ),
                               shape: RoundedRectangleBorder(
@@ -796,7 +791,7 @@ class Reviews extends StatelessWidget {
                   fontSize: 14,
                   fontFamily: 'Lato',
                   fontWeight: FontWeight.w400,
-                  height: 0.10,
+                  height: 1.4,
                 ),
               ),
             ),
@@ -804,14 +799,12 @@ class Reviews extends StatelessWidget {
         ),
       ),
       Container(
+        margin: const EdgeInsets.only(left: 24, right: 24),
         width: 342,
         height: 160,
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: const BoxDecoration(
           border: Border(
-            left: BorderSide(color: Color(0xFFD0D5DD)),
-            top: BorderSide(color: Color(0xFFD0D5DD)),
-            right: BorderSide(color: Color(0xFFD0D5DD)),
             bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
           ),
         ),
@@ -854,8 +847,7 @@ class Reviews extends StatelessWidget {
                             height: 44,
                             decoration: ShapeDecoration(
                               image: const DecorationImage(
-                                image: NetworkImage(
-                                    "https://via.placeholder.com/44x44"),
+                                image: AssetImage('assets/images/person4.png'),
                                 fit: BoxFit.cover,
                               ),
                               shape: RoundedRectangleBorder(
@@ -1006,7 +998,7 @@ class Reviews extends StatelessWidget {
                   fontSize: 14,
                   fontFamily: 'Lato',
                   fontWeight: FontWeight.w400,
-                  height: 0.10,
+                  height: 1.4,
                 ),
               ),
             ),
@@ -1014,14 +1006,12 @@ class Reviews extends StatelessWidget {
         ),
       ),
       Container(
+        margin: const EdgeInsets.only(left: 24, right: 24),
         width: 342,
         height: 160,
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: const BoxDecoration(
           border: Border(
-            left: BorderSide(color: Color(0xFFD0D5DD)),
-            top: BorderSide(color: Color(0xFFD0D5DD)),
-            right: BorderSide(color: Color(0xFFD0D5DD)),
             bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
           ),
         ),
@@ -1064,8 +1054,7 @@ class Reviews extends StatelessWidget {
                             height: 44,
                             decoration: ShapeDecoration(
                               image: const DecorationImage(
-                                image: NetworkImage(
-                                    "https://via.placeholder.com/44x44"),
+                                image: AssetImage('assets/images/person5.png'),
                                 fit: BoxFit.cover,
                               ),
                               shape: RoundedRectangleBorder(
@@ -1216,7 +1205,7 @@ class Reviews extends StatelessWidget {
                   fontSize: 14,
                   fontFamily: 'Lato',
                   fontWeight: FontWeight.w400,
-                  height: 0.10,
+                  height: 1.4,
                 ),
               ),
             ),

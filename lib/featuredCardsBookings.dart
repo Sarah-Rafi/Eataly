@@ -8,20 +8,25 @@ class Bookings extends StatelessWidget {
     return Scaffold(
         //implements basic material design
         body: ListView(children: [
-      const Text(
-        'Available Seats',
-        style: TextStyle(
-          color: Color(0xFF00C572),
-          fontSize: 16,
-          fontFamily: 'Lato',
-          fontWeight: FontWeight.w700,
-          height: 0,
+      const Padding(
+        padding: EdgeInsets.only(
+            top: 24, left: 24), // Add 24px top margin and 8px bottom padding
+        child: Text(
+          'Available Seats',
+          style: TextStyle(
+            color: Color(0xFF00C572),
+            fontSize: 16,
+            fontFamily: 'Lato',
+            fontWeight: FontWeight.w700,
+            height: 0,
+          ),
         ),
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -74,6 +79,7 @@ class Bookings extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -143,6 +149,7 @@ class Bookings extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -195,6 +202,7 @@ class Bookings extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -252,6 +260,7 @@ class Bookings extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -304,6 +313,7 @@ class Bookings extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -357,20 +367,24 @@ class Bookings extends StatelessWidget {
           ),
         ],
       ),
-      const Text(
-        'Occupied Tables',
-        style: TextStyle(
-          color: Color(0xFF00C572),
-          fontSize: 16,
-          fontFamily: 'Lato',
-          fontWeight: FontWeight.w700,
-          height: 0,
+      const Padding(
+        padding: EdgeInsets.only(left: 24),
+        child: Text(
+          'Occupied Tables',
+          style: TextStyle(
+            color: Color(0xFF00C572),
+            fontSize: 16,
+            fontFamily: 'Lato',
+            fontWeight: FontWeight.w700,
+            height: 0,
+          ),
         ),
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -423,6 +437,7 @@ class Bookings extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -480,6 +495,7 @@ class Bookings extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),
@@ -532,6 +548,7 @@ class Bookings extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
             height: 192,
             padding: const EdgeInsets.all(12),

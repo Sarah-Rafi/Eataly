@@ -84,15 +84,37 @@ class Details extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    const Text(
-                      '243 San Street, 371 Road, Ireland',
-                      style: TextStyle(
-                        color: Color(0xFF888888),
-                        fontSize: 12,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
+                    Row(
+                      children: [
+                        Container(
+                          width: 16, // Adjust width as needed
+                          height: 18, // Adjust height as needed
+                          // Right margin of 12px
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/location.png'), // Your image URL
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(
+                              left:
+                                  8), // Add 24px top margin and 8px bottom padding
+                          child:
+                              // This ensures text takes up remaining space
+                              Text(
+                            '243 San Street, 371 Road, Ireland',
+                            style: TextStyle(
+                              color: Color(0xFF888888),
+                              fontSize: 12,
+                              fontFamily: 'Lato',
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -113,11 +135,10 @@ class Details extends StatelessWidget {
                     children: [
                       Container(
                         width: 310,
-                        height: 198,
+                        height: 196,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(
-                                "https://via.placeholder.com/312x234"),
+                            image: AssetImage('assets/images/map.png'),
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -174,6 +195,7 @@ class Details extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: 12),
+                    
                     Text(
                       '+ 123  456  789',
                       style: TextStyle(

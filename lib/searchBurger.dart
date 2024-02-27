@@ -1,4 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class ToggleIcon extends StatefulWidget {
+  const ToggleIcon({super.key});
+
+  @override
+  _ToggleIconState createState() => _ToggleIconState();
+}
+
+class _ToggleIconState extends State<ToggleIcon> {
+  bool _isFilled = false; // Initial state of the icon
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _isFilled = !_isFilled; // Toggle the state on tap
+        });
+      },
+      child: _isFilled
+          ? SvgPicture.asset(
+              'assets/svgIcons/filledHeart.svg', // Path to the filled SVG icon
+              width: 24,
+              height: 24,
+            )
+          : SvgPicture.asset(
+              'assets/svgIcons/emptyHeart.svg', // Path to the unfilled SVG icon
+              width: 24,
+              height: 24,
+            ),
+    );
+  }
+}
 
 class SearchResults extends StatelessWidget {
   const SearchResults({Key? key}) : super(key: key);
@@ -9,12 +43,34 @@ class SearchResults extends StatelessWidget {
       //implements basic material design
       body: ListView(
         children: [
-          Row(
+          Container(
+            //first container
+            width: MediaQuery.of(context)
+                .size
+                .width, // This will match the screen width
+            height: 104,
+            padding: const EdgeInsets.only(
+              top: 32,
+              left: 24,
+              right: 24,
+              bottom:24,
+            ),
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.800000011920929),
+              border: const Border(
+                left: BorderSide(color: Color(0xFFD0D5DD)),
+                top: BorderSide(color: Color(0xFFD0D5DD)),
+                right: BorderSide(color: Color(0xFFD0D5DD)),
+                bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
+              ),
+            ),
+          child: Row(
             mainAxisAlignment:
                 MainAxisAlignment.start, // Align items to the start of the row
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 24),
+                padding: const EdgeInsets.only(right: 9.5),
                 child: Image.asset(
                   'assets/images/arrowLeft.png', // Replace with the actual path to your image asset
                   width: 24,
@@ -24,7 +80,7 @@ class SearchResults extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 306,
+                width: 270,
                 height: 43,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
@@ -87,7 +143,10 @@ class SearchResults extends StatelessWidget {
               ),
             ],
           ),
-          const Text(
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 24, bottom: 8, left: 24),
+            child: Text(
             'About 270 Search Results',
             style: TextStyle(
               color: Color(0xFF00C572),
@@ -97,9 +156,11 @@ class SearchResults extends StatelessWidget {
               height: 0,
             ),
           ),
+          ),
           Container(
+            margin: const EdgeInsets.only(left: 24, right: 24),
             width: 342,
-            height: 332,
+            height: 340,
             padding: const EdgeInsets.all(12),
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(
@@ -116,14 +177,15 @@ class SearchResults extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 280,
+                  height: 285,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        width: 318,
+                        width: 286,
+                        height: 200,
                         clipBehavior: Clip.antiAlias,
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
@@ -135,7 +197,7 @@ class SearchResults extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              width: 318,
+                              width: 286,
                               height: 200,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
@@ -154,6 +216,10 @@ class SearchResults extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .start, // Adjust alignment as needed
+                            children: [
                           Text(
                             'Smash Burgers - Gulberg',
                             style: TextStyle(
@@ -163,6 +229,10 @@ class SearchResults extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               height: 0,
                             ),
+                          ),
+                              Spacer(),
+                              ToggleIcon(),
+                            ],
                           ),
                           SizedBox(height: 8),
                           Row(
@@ -329,8 +399,9 @@ class SearchResults extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, left: 24, right: 24),
             width: 342,
-            height: 332,
+            height: 340,
             padding: const EdgeInsets.all(12),
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(
@@ -347,7 +418,7 @@ class SearchResults extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 280,
+                  height: 285,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -366,7 +437,7 @@ class SearchResults extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              width: 318,
+                              width: 286,
                               height: 200,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
@@ -385,6 +456,10 @@ class SearchResults extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .start, // Adjust alignment as needed
+                            children: [
                           Text(
                             'Burger Lab - MM Alam',
                             style: TextStyle(
@@ -394,6 +469,10 @@ class SearchResults extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               height: 0,
                             ),
+                          ),
+                              Spacer(),
+                              ToggleIcon(),
+                            ],
                           ),
                           SizedBox(height: 8),
                           Row(
@@ -560,8 +639,9 @@ class SearchResults extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, left: 24, right: 24),
             width: 342,
-            height: 332,
+            height: 340,
             padding: const EdgeInsets.all(12),
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(
@@ -578,7 +658,7 @@ class SearchResults extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 280,
+                  height: 285,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -596,7 +676,7 @@ class SearchResults extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              width: 318,
+                              width: 286,
                               height: 200,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
@@ -615,6 +695,10 @@ class SearchResults extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .start, // Adjust alignment as needed
+                            children: [
                           Text(
                             'Crazy Burgers',
                             style: TextStyle(
@@ -624,6 +708,10 @@ class SearchResults extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               height: 0,
                             ),
+                          ),
+                              Spacer(),
+                              ToggleIcon(),
+                            ],
                           ),
                           SizedBox(height: 8),
                           Row(
@@ -790,8 +878,9 @@ class SearchResults extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, left: 24, right: 24),
             width: 342,
-            height: 332,
+            height: 340,
             padding: const EdgeInsets.all(12),
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(
@@ -808,7 +897,7 @@ class SearchResults extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 280,
+                  height: 285,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -827,7 +916,7 @@ class SearchResults extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              width: 318,
+                              width: 286,
                               height: 200,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
@@ -846,6 +935,10 @@ class SearchResults extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .start, // Adjust alignment as needed
+                            children: [
                           Text(
                             'Tayto Cafe',
                             style: TextStyle(
@@ -855,6 +948,10 @@ class SearchResults extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               height: 0,
                             ),
+                              ),
+                              Spacer(),
+                              ToggleIcon(),
+                            ],
                           ),
                           SizedBox(height: 8),
                           Row(
@@ -1021,8 +1118,9 @@ class SearchResults extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, left: 24, right: 24),
             width: 342,
-            height: 332,
+            height: 340,
             padding: const EdgeInsets.all(12),
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(
@@ -1039,14 +1137,15 @@ class SearchResults extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 280,
+                  height: 285,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        width: 318,
+                        width: 286,
+                        height: 200,
                         clipBehavior: Clip.antiAlias,
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
@@ -1058,7 +1157,7 @@ class SearchResults extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              width: 318,
+                              width: 286,
                               height: 200,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
@@ -1077,6 +1176,10 @@ class SearchResults extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .start, // Adjust alignment as needed
+                            children: [
                           Text(
                             'Dark Aesthetic Burgers',
                             style: TextStyle(
@@ -1086,6 +1189,10 @@ class SearchResults extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               height: 0,
                             ),
+                          ),
+                              Spacer(),
+                              ToggleIcon(),
+                            ],
                           ),
                           SizedBox(height: 8),
                           Row(
@@ -1252,8 +1359,9 @@ class SearchResults extends StatelessWidget {
             ),
           ),
           Container(
+            margin: const EdgeInsets.only(top: 16, left: 24, right: 24),
             width: 342,
-            height: 332,
+            height: 340,
             padding: const EdgeInsets.all(12),
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(
@@ -1270,14 +1378,15 @@ class SearchResults extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 280,
+                  height: 285,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        width: 318,
+                        width: 286,
+                        height: 200,
                         clipBehavior: Clip.antiAlias,
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
@@ -1289,7 +1398,7 @@ class SearchResults extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              width: 318,
+                              width: 286,
                               height: 200,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
@@ -1308,6 +1417,10 @@ class SearchResults extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .start, // Adjust alignment as needed
+                            children: [
                           Text(
                             'Dark Aesthetic Burgers',
                             style: TextStyle(
@@ -1317,6 +1430,10 @@ class SearchResults extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               height: 0,
                             ),
+                          ),
+                              Spacer(),
+                              ToggleIcon(),
+                            ],
                           ),
                           SizedBox(height: 8),
                           Row(
