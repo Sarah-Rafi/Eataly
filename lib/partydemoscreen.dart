@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'myfriendsscreen.dart';
 
 class PartyDemoScreen extends StatelessWidget {
   @override
@@ -358,35 +359,51 @@ class PartyDemoScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-  width: 300,
-  height: 59,
-  margin: EdgeInsets.only(top: 0, left: 0),
-  padding: EdgeInsets.fromLTRB(12, 16, 12, 16),
-  decoration: BoxDecoration(
-    color: Color(0xFF00B288),
-    borderRadius: BorderRadius.circular(12),
-  ),
-  child: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween, // Adjust as needed
-    children: [
-      Text(
-        'Lets Party',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 15,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      SizedBox(width: 16), // Adjust spacing between text and image
-      Image.asset(
-        'assets/vuesax.png',
-        width: 24,
-        height: 24, // Adjust height as needed
-      ),
-    ],
-  ),
-),
+            Positioned(
+                    bottom: 160,
+                    left: 25,
+                    right: 0,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyFriendsScreen(),
+                          ),
+                        );
+                      },
+                      child: SizedBox(
+                        width: 300,
+                        height: 48,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Color(0xFF00B288),
+                          ),
+                          padding: EdgeInsets.fromLTRB(16, 12, 16, 12),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Lets Party',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(width: 8),
+                              Image.asset(
+                                'assets/vuesax.png',
+                                width: 30,
+                                height: 30,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
           ],
         ),
       ),

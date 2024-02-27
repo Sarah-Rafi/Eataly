@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'partydemoscreen.dart';
+import 'addfriendsscreen.dart';
 
 class PartyScreen extends StatelessWidget {
   @override
@@ -167,7 +167,7 @@ class PartyScreen extends StatelessWidget {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => PartyDemoScreen()),
+                                MaterialPageRoute(builder: (context) => AddFriendsScreen()),
                               );
                             },
                             child: Row(
