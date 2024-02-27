@@ -8,6 +8,7 @@ import 'package:eataly/featuredCardsMenu.dart';
 import 'package:eataly/featuredCardsDetails.dart';
 import 'package:eataly/featuredCardsPhotos.dart';
 import 'components/topNavigationBar.dart';
+
 void main() {
   runApp(const MyApp());
 }
