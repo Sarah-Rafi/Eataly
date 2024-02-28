@@ -8,8 +8,7 @@ class YourPartyScreen extends StatelessWidget {
       height: 844.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32.0),
-        color: Colors.white, // You can change the color as per your design
-        // You can add more styling attributes like border, boxShadow, etc. here
+        color: Colors.white,
       ),
       child: Stack(
         children: [
@@ -57,6 +56,7 @@ class YourPartyScreen extends StatelessWidget {
                                 fontSize: 14,
                                 fontFamily: 'Lato',
                                 fontWeight: FontWeight.w500,
+                                decoration: TextDecoration.none,
                               ),
                             ),
                             const SizedBox(height: 2),
@@ -67,6 +67,7 @@ class YourPartyScreen extends StatelessWidget {
                                 fontSize: 22,
                                 fontFamily: 'Lato',
                                 fontWeight: FontWeight.w600,
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ],
@@ -81,11 +82,11 @@ class YourPartyScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              ],      
+              ],
             ),
           ),
           Positioned(
-            top: 180, // Adjust the position as needed
+            top: 180,
             left: 24,
             child: SizedBox(
               width: 322,
@@ -98,12 +99,13 @@ class YourPartyScreen extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   letterSpacing: 0,
                   color: Color(0xFF222222),
+                  decoration: TextDecoration.none,
                 ),
               ),
             ),
           ),
           Positioned(
-            top: 240, // Adjust the position as needed
+            top: 230,
             left: 24,
             child: SizedBox(
               width: 326,
@@ -116,11 +118,11 @@ class YourPartyScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   letterSpacing: 0,
                   color: Colors.grey,
+                  decoration: TextDecoration.none,
                 ),
               ),
             ),
           ),
-          // Add more widgets to the Stack if needed
         ],
       ),
     );
