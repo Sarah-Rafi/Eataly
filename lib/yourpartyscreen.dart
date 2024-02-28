@@ -11,7 +11,118 @@ class YourPartyScreen extends StatelessWidget {
         color: Colors.white, // You can change the color as per your design
         // You can add more styling attributes like border, boxShadow, etc. here
       ),
-      // Add your screen content/widgets here
+      child: Stack(
+        children: [
+          Container(
+            width: 400,
+            height: 120,
+            padding: const EdgeInsets.only(
+              top: 55,
+              left: 24,
+              right: 24,
+              bottom: 0,
+            ),
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.800000011920929),
+              border: Border(
+                left: BorderSide(color: Color(0xFFD0D5DD)),
+                top: BorderSide(color: Color(0xFFD0D5DD)),
+                right: BorderSide(color: Color(0xFFD0D5DD)),
+                bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
+              ),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Good Morning',
+                              style: TextStyle(
+                                color: Color(0xFF222222),
+                                fontSize: 14,
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              'John Doe',
+                              style: TextStyle(
+                                color: Color(0xFF222222),
+                                fontSize: 22,
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 190),
+                      Image(
+                        width: 24,
+                        height: 24,
+                        image: AssetImage('assets/notification.png'),
+                      )
+                    ],
+                  ),
+                ),
+              ],      
+            ),
+          ),
+          Positioned(
+            top: 180, // Adjust the position as needed
+            left: 24,
+            child: SizedBox(
+              width: 322,
+              height: 40,
+              child: Text(
+                'Your Party',
+                style: TextStyle(
+                  fontFamily: 'Lato',
+                  fontSize: 33,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 0,
+                  color: Color(0xFF222222),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 240, // Adjust the position as needed
+            left: 24,
+            child: SizedBox(
+              width: 326,
+              height: 40,
+              child: Text(
+                'People you add in your Party will Appear here',
+                style: TextStyle(
+                  fontFamily: 'Lato',
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+          ),
+          // Add more widgets to the Stack if needed
+        ],
+      ),
     );
   }
 }

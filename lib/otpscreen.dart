@@ -108,53 +108,51 @@ class OtpScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              for (int i = 0; i < 4; i++)
-                                Padding(
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            for (int i = 0; i < 4; i++)
+                              Padding(
+                                padding: const EdgeInsets.all(12),
+                                child: Container(
                                   padding: const EdgeInsets.all(12),
-                                  child: Container(
-                                    padding: const EdgeInsets.all(12),
-                                    decoration: ShapeDecoration(
-                                      color: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        side: BorderSide(
-                                            width: 1, color: Color(0xFFD0D5DD)),
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        SizedBox(
-                                          width: 20,
-                                          height: 20,
-                                          child: Text(
-                                            '0',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Color(0xFF555555),
-                                              fontSize: 16,
-                                              fontFamily: 'Lato',
-                                              fontWeight: FontWeight.w700,
-                                              height: 0,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
+                                  decoration: ShapeDecoration(
+                                    color: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      side: BorderSide(
+                                          width: 1, color: Color(0xFFD0D5DD)),
+                                      borderRadius: BorderRadius.circular(8),
                                     ),
                                   ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                        height: 20,
+                                        child: Text(
+                                          '0',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF555555),
+                                            fontSize: 16,
+                                            fontFamily: 'Lato',
+                                            fontWeight: FontWeight.w700,
+                                            height: 0,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                            ],
-                          ),
+                              ),
+                          ],
                         ),
                       ],
                     ),

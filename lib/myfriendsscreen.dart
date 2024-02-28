@@ -135,7 +135,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -250,7 +250,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -365,7 +365,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -480,7 +480,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -595,7 +595,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -710,7 +710,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -825,7 +825,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -940,7 +940,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -1055,7 +1055,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -1170,7 +1170,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
@@ -1239,9 +1239,8 @@ class MyFriendsScreen extends StatelessWidget {
                                     top: 11,
                                     child: Image(
                                       width: 9, // Adjust width as needed
-                                      height: 3, // Adjust height as needed
-                                      image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                      height: 3,
+                                      image: AssetImage('assets/rec1.png'),
                                     ),
                                   ),
                                 ],
@@ -1256,8 +1255,8 @@ class MyFriendsScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 935, // Adjust the top position as needed
-              left: 27, // Adjust the left position as needed
+              top: 935,
+              left: 27,
               child: Container(
                 width: 305,
                 height: 64,
@@ -1285,15 +1284,15 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
                         children: [
                           Positioned(
-                            top: 0, // Adjust the top position as needed
+                            top: 0,
                             left: 0,
-                            right: 50, // Adjust the left position as needed
+                            right: 50,
                             child: Text(
                               'Lucas Andrade',
                               style: TextStyle(
@@ -1334,7 +1333,7 @@ class MyFriendsScreen extends StatelessWidget {
                           ),
                           Positioned(
                             top: 8,
-                            right: 0, // Adjust the right position as needed
+                            right: 0,
                             child: Container(
                               width: 26,
                               height: 26,
@@ -1353,10 +1352,9 @@ class MyFriendsScreen extends StatelessWidget {
                                   Positioned(
                                     top: 11,
                                     child: Image(
-                                      width: 9, // Adjust width as needed
-                                      height: 3, // Adjust height as needed
-                                      image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                      width: 9,
+                                      height: 3,
+                                      image: AssetImage('assets/rec1.png'),
                                     ),
                                   ),
                                 ],
@@ -1371,8 +1369,8 @@ class MyFriendsScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 1010, // Adjust the top position as needed
-              left: 27, // Adjust the left position as needed
+              top: 1010,
+              left: 27,
               child: Container(
                 width: 305,
                 height: 64,
@@ -1400,15 +1398,15 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 230,
                       height: 40,
                       child: Stack(
                         children: [
                           Positioned(
-                            top: 0, // Adjust the top position as needed
+                            top: 0,
                             left: 0,
-                            right: 50, // Adjust the left position as needed
+                            right: 50,
                             child: Text(
                               'Luke Vialy',
                               style: TextStyle(
@@ -1449,7 +1447,7 @@ class MyFriendsScreen extends StatelessWidget {
                           ),
                           Positioned(
                             top: 8,
-                            right: 0, // Adjust the right position as needed
+                            right: 0,
                             child: Container(
                               width: 26,
                               height: 26,
@@ -1468,10 +1466,9 @@ class MyFriendsScreen extends StatelessWidget {
                                   Positioned(
                                     top: 11,
                                     child: Image(
-                                      width: 9, // Adjust width as needed
-                                      height: 3, // Adjust height as needed
-                                      image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                      width: 9,
+                                      height: 3,
+                                      image: AssetImage('assets/rec1.png'),
                                     ),
                                   ),
                                 ],
@@ -1486,8 +1483,8 @@ class MyFriendsScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 1100, // Adjust the top position as needed
-              left: 80, // Adjust the left position as needed
+              top: 1100,
+              left: 80,
               child: Container(
                 width: 180,
                 height: 50,
