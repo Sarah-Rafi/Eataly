@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'signupscreen.dart';
+import 'Home.dart';
+import 'components/bottomNavigatorBar.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
     );
@@ -16,6 +20,8 @@ class MyApp extends StatelessWidget {
 }
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +31,8 @@ class LoginScreen extends StatelessWidget {
             width: 432,
             height: 932,
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/backgroundimage.png'),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/backgroundimage.png'),
                 fit: BoxFit.cover,
               ),
               color: Colors.black.withOpacity(0.6),
@@ -37,8 +43,8 @@ class LoginScreen extends StatelessWidget {
             height: 932,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment(0.01, 1.00),
-                end: Alignment(-0.01, -1),
+                begin: const Alignment(0.01, 1.00),
+                end: const Alignment(-0.01, -1),
                 colors: [Colors.black, Colors.black.withOpacity(0.1)],
               ),
             ),
@@ -61,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                           top: 10.08,
                           child: Container(
                             width: 111.78,
-                            decoration: ShapeDecoration(
+                            decoration: const ShapeDecoration(
                               shape: RoundedRectangleBorder(
                                 side: BorderSide(
                                   width: 0.59,
@@ -84,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                           top: 10.08,
                           child: Container(
                             width: 111.78,
-                            decoration: ShapeDecoration(
+                            decoration: const ShapeDecoration(
                               shape: RoundedRectangleBorder(
                                 side: BorderSide(
                                   width: 0.59,
@@ -102,7 +108,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 117.11,
                           top: 2,
                           child: Text(
@@ -129,10 +135,11 @@ class LoginScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignupScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => const SignupScreen()),
                       );
                     },
-                    child: Text.rich(
+                    child: const Text.rich(
                       TextSpan(
                         children: [
                           TextSpan(
@@ -167,12 +174,12 @@ class LoginScreen extends StatelessWidget {
                     width: 150,
                     height: 100,
                     child: Image.asset(
-                      'assets/eataly.png',
+                      'assets/images/eataly.png',
                       fit: BoxFit.fill,
                     ),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   left: 47,
                   top: 170,
                   child: SizedBox(
@@ -201,7 +208,7 @@ class LoginScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Log In',
                           style: TextStyle(
                             color: Color(0xFF00ECB4),
@@ -224,16 +231,16 @@ class LoginScreen extends StatelessWidget {
                                   width: 300,
                                   height: 50,
                                   decoration: ShapeDecoration(
-                                    color: Color(0x33D9D9D9),
+                                    color: const Color(0x33D9D9D9),
                                     shape: RoundedRectangleBorder(
-                                      side: BorderSide(
+                                      side: const BorderSide(
                                           width: 1, color: Colors.white),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                   ),
                                 ),
                               ),
-                              Positioned(
+                              const Positioned(
                                 left: 22.5,
                                 top: 5,
                                 child: SizedBox(
@@ -251,7 +258,7 @@ class LoginScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Positioned(
+                              const Positioned(
                                 left: 30,
                                 top: 52,
                                 child: SizedBox(
@@ -285,16 +292,16 @@ class LoginScreen extends StatelessWidget {
                                   width: 300,
                                   height: 50,
                                   decoration: ShapeDecoration(
-                                    color: Color(0x33D9D9D9),
+                                    color: const Color(0x33D9D9D9),
                                     shape: RoundedRectangleBorder(
-                                      side: BorderSide(
+                                      side: const BorderSide(
                                           width: 1, color: Colors.white),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                   ),
                                 ),
                               ),
-                              Positioned(
+                              const Positioned(
                                 left: 22.5,
                                 top: 5,
                                 child: SizedBox(
@@ -312,7 +319,7 @@ class LoginScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Positioned(
+                              const Positioned(
                                 left: 30,
                                 top: 52,
                                 child: SizedBox(
@@ -357,7 +364,7 @@ class LoginScreen extends StatelessWidget {
                               Container(
                                 width: 59,
                                 height: 59,
-                                decoration: ShapeDecoration(
+                                decoration: const ShapeDecoration(
                                   color: Color(0xFFECECEC),
                                   shape: CircleBorder(
                                     side: BorderSide(
@@ -376,11 +383,11 @@ class LoginScreen extends StatelessWidget {
                                   child: Container(
                                     width: 32,
                                     height: 32,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
-                                        image:
-                                            AssetImage("assets/facebook.png"),
+                                        image: AssetImage(
+                                            "assets/images/facebook.png"),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
@@ -401,7 +408,7 @@ class LoginScreen extends StatelessWidget {
                               Container(
                                 width: 59,
                                 height: 59,
-                                decoration: ShapeDecoration(
+                                decoration: const ShapeDecoration(
                                   color: Color(0xFFECECEC),
                                   shape: CircleBorder(
                                     side: BorderSide(
@@ -420,10 +427,11 @@ class LoginScreen extends StatelessWidget {
                                   child: Container(
                                     width: 24,
                                     height: 24,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
-                                        image: AssetImage("assets/google.png"),
+                                        image: AssetImage(
+                                            "assets/images/google.png"),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
@@ -449,17 +457,27 @@ class LoginScreen extends StatelessWidget {
                         Positioned(
                           left: 22.5,
                           top: 0,
-                          child: Container(
-                            width: 300,
-                            height: 50,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFF00B287),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8)),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const BottomNavigationBarMenu()),
+                              );
+                            },
+                            child: Container(
+                              width: 300,
+                              height: 50,
+                              decoration: ShapeDecoration(
+                                color: const Color(0xFF00B287),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8)),
+                              ),
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 138,
                           top: 24,
                           child: SizedBox(

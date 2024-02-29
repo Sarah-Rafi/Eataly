@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'myfriendsscreen.dart';
 
 class PartyDemoScreen extends StatelessWidget {
+  const PartyDemoScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +34,7 @@ class PartyDemoScreen extends StatelessWidget {
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.800000011920929),
-                      border: Border(
+                      border: const Border(
                         left: BorderSide(color: Color(0xFFD0D5DD)),
                         top: BorderSide(color: Color(0xFFD0D5DD)),
                         right: BorderSide(color: Color(0xFFD0D5DD)),
@@ -40,7 +42,7 @@ class PartyDemoScreen extends StatelessWidget {
                             BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
                       ),
                     ),
-                    child: Column(
+                    child: const Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +70,7 @@ class PartyDemoScreen extends StatelessWidget {
                                         height: 0,
                                       ),
                                     ),
-                                    const SizedBox(height: 2),
+                                    SizedBox(height: 2),
                                     Text(
                                       'John Doe',
                                       style: TextStyle(
@@ -86,7 +88,8 @@ class PartyDemoScreen extends StatelessWidget {
                               Image(
                                 width: 24,
                                 height: 24,
-                                image: AssetImage('assets/notification.png'),
+                                image: AssetImage(
+                                    'assets/images/notification.png'),
                               )
                             ],
                           ),
@@ -101,7 +104,7 @@ class PartyDemoScreen extends StatelessWidget {
                     child: Center(
                       child: RichText(
                         textAlign: TextAlign.left,
-                        text: TextSpan(
+                        text: const TextSpan(
                           style: TextStyle(
                             fontFamily: 'Lato',
                             fontSize: 32,
@@ -116,7 +119,7 @@ class PartyDemoScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   SizedBox(
                     width: 305,
                     height: 45,
@@ -126,11 +129,11 @@ class PartyDemoScreen extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/addfriendss.png',
+                            'assets/images/addfriendss.png',
                           ),
                         ),
-                        SizedBox(width: 16),
-                        Column(
+                        const SizedBox(width: 16),
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
@@ -164,7 +167,7 @@ class PartyDemoScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   SizedBox(
                     width: 305,
                     height: 45,
@@ -174,11 +177,11 @@ class PartyDemoScreen extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/wallet.png',
+                            'assets/images/wallet.png',
                           ),
                         ),
-                        SizedBox(width: 16),
-                        Column(
+                        const SizedBox(width: 16),
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
@@ -212,7 +215,7 @@ class PartyDemoScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   SizedBox(
                     width: 305,
                     height: 45,
@@ -222,11 +225,11 @@ class PartyDemoScreen extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/happyemoji.png',
+                            'assets/images/happyemoji.png',
                           ),
                         ),
-                        SizedBox(width: 16),
-                        Column(
+                        const SizedBox(width: 16),
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
@@ -260,7 +263,7 @@ class PartyDemoScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   SizedBox(
                     width: 305,
                     height: 45,
@@ -270,11 +273,11 @@ class PartyDemoScreen extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/cup.png',
+                            'assets/images/cup.png',
                           ),
                         ),
-                        SizedBox(width: 16),
-                        Column(
+                        const SizedBox(width: 16),
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
@@ -308,7 +311,7 @@ class PartyDemoScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   SizedBox(
                     width: 305,
                     height: 45,
@@ -318,11 +321,11 @@ class PartyDemoScreen extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/tagright.png',
+                            'assets/images/tagright.png',
                           ),
                         ),
-                        SizedBox(width: 16),
-                        Column(
+                        const SizedBox(width: 16),
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
@@ -368,7 +371,7 @@ class PartyDemoScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MyFriendsScreen(),
+                      builder: (context) => const MyFriendsScreen(),
                           ),
                         );
                       },
@@ -378,13 +381,13 @@ class PartyDemoScreen extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF00B288),
+                      color: const Color(0xFF00B288),
                           ),
-                          padding: EdgeInsets.fromLTRB(16, 12, 16, 12),
+                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                        const Text(
                                 'Lets Party',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -392,9 +395,9 @@ class PartyDemoScreen extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(width: 8),
+                        const SizedBox(width: 8),
                               Image.asset(
-                                'assets/vuesax.png',
+                          'assets/images/vuesax.png',
                                 width: 30,
                                 height: 30,
                               ),

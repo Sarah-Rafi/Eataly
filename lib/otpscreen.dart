@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'searchscreen.dart';
+import 'loginscreen.dart';
 
 class OtpScreen extends StatelessWidget {
+  const OtpScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,8 +14,8 @@ class OtpScreen extends StatelessWidget {
             width: 432,
             height: 932,
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/backgroundimage.png'),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/backgroundimage.png'),
                 fit: BoxFit.cover,
               ),
               color: Colors.black.withOpacity(0.6),
@@ -23,8 +26,8 @@ class OtpScreen extends StatelessWidget {
             height: 932,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment(0.01, 1.00),
-                end: Alignment(-0.01, -1),
+                begin: const Alignment(0.01, 1.00),
+                end: const Alignment(-0.01, -1),
                 colors: [Colors.black, Colors.black.withOpacity(0.1)],
               ),
             ),
@@ -36,12 +39,12 @@ class OtpScreen extends StatelessWidget {
               width: 150,
               height: 100,
               child: Image.asset(
-                'assets/eataly.png',
+                'assets/images/eataly.png',
                 fit: BoxFit.fill,
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 47,
             top: 170,
             child: SizedBox(
@@ -59,7 +62,7 @@ class OtpScreen extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: (340 - 205) / 2,
             top: 260,
             child: Text(
@@ -73,7 +76,7 @@ class OtpScreen extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 32,
             top: 300,
             child: SizedBox(
@@ -108,6 +111,7 @@ class OtpScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+                        // ignore: avoid_unnecessary_containers
                         Container(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
@@ -122,12 +126,12 @@ class OtpScreen extends StatelessWidget {
                                     decoration: ShapeDecoration(
                                       color: Colors.white,
                                       shape: RoundedRectangleBorder(
-                                        side: BorderSide(
+                                        side: const BorderSide(
                                             width: 1, color: Color(0xFFD0D5DD)),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                     ),
-                                    child: Row(
+                                    child: const Row(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -178,14 +182,15 @@ class OtpScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SearchScreen()),
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen()),
                         );
                       },
                       child: Container(
                         width: 300,
                         height: 50,
                         decoration: ShapeDecoration(
-                          color: Color(0xFF00B287),
+                          color: const Color(0xFF00B287),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
@@ -193,7 +198,7 @@ class OtpScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 138,
                     top: 24,
                     child: SizedBox(

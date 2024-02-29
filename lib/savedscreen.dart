@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'partyscreen.dart';
 
 class SavedScreen extends StatelessWidget {
+  const SavedScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +34,7 @@ class SavedScreen extends StatelessWidget {
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.800000011920929),
-                      border: Border(
+                      border: const Border(
                         left: BorderSide(color: Color(0xFFD0D5DD)),
                         top: BorderSide(color: Color(0xFFD0D5DD)),
                         right: BorderSide(color: Color(0xFFD0D5DD)),
@@ -40,7 +42,7 @@ class SavedScreen extends StatelessWidget {
                             BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
                       ),
                     ),
-                    child: Column(
+                    child: const Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +75,7 @@ class SavedScreen extends StatelessWidget {
               height: 1.0, // Adjust the height as needed
             ),
           ),
-          const SizedBox(height: 2),
+                                        SizedBox(height: 2),
           Text(
             'John Doe',
             style: TextStyle(
@@ -90,7 +92,8 @@ class SavedScreen extends StatelessWidget {
       Image(
         width: 24,
         height: 24,
-        image: AssetImage('assets/notification.png'),
+                                      image: AssetImage(
+                                          'assets/images/notification.png'),
       ),
     ],
   ),                             
@@ -107,22 +110,22 @@ class SavedScreen extends StatelessWidget {
             Container(
               width: 180,
               height: 200,
-              margin: EdgeInsets.only(top: 0, left: 0),
+              margin: const EdgeInsets.only(top: 0, left: 0),
               child: Container(
                 width: 200,
                 height: 200,
-                margin: EdgeInsets.only(left: 0),
-                child: Image(
-                  image: AssetImage("assets/fastfood.png"),
+                margin: const EdgeInsets.only(left: 0),
+                child: const Image(
+                  image: AssetImage("assets/images/fastfood.png"),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Container(
               width: 291,
               height: 52,
-              margin: EdgeInsets.only(top: 8),
+              margin: const EdgeInsets.only(top: 8),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -130,8 +133,8 @@ class SavedScreen extends StatelessWidget {
                     width: 300,
                     height: 22,
                     alignment: Alignment.center,
-                    decoration: BoxDecoration(),
-                    child: Text(
+                    decoration: const BoxDecoration(),
+                    child: const Text(
                       'You haven’t saved any items',
                       style: TextStyle(
                         fontFamily: 'Lato',
@@ -145,8 +148,8 @@ class SavedScreen extends StatelessWidget {
                     width: 300,
                     height: 22,
                     alignment: Alignment.center,
-                    decoration: BoxDecoration(),
-                    child: Text(
+                    decoration: const BoxDecoration(),
+                    child: const Text(
                       'Return to Home to Explore and Save',
                       style: TextStyle(
                         fontFamily: 'Lato',
@@ -169,13 +172,13 @@ class SavedScreen extends StatelessWidget {
               child: Container(
                 width: 155,
                 height: 44,
-                padding: EdgeInsets.fromLTRB(12, 10, 12, 10),
-                margin: EdgeInsets.all(10),
+                padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Color(0xFF00B288),
+                  color: const Color(0xFF00B288),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Return To Home',
                     style: TextStyle(

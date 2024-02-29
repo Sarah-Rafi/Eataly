@@ -4,7 +4,8 @@ import 'package:eataly/Party.dart';
 import 'package:eataly/Profile.dart';
 import 'package:eataly/Saved.dart';
 import 'package:flutter/material.dart';
-
+import 'package:eataly/partyscreen.dart';
+import 'package:eataly/savedscreen.dart';
 class BottomNavigationBarMenu extends StatefulWidget {
   const BottomNavigationBarMenu({super.key});
 
@@ -35,7 +36,6 @@ class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
     'assets/images/bookingsGreen.png',
     'assets/images/profileGreen.png',
   ];
-
   final List<String> _tabTitles = [
     'Home',
     'Saved',
@@ -43,13 +43,11 @@ class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
     'Bookings',
     'Profile'
   ];
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
-        appBar: AppBar(),
         bottomNavigationBar: TabBar(
           onTap: (index) {
             // Update the selected index on tap
@@ -74,9 +72,12 @@ class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
                 style: TextStyle(
                   color: _selectedIndex == index
                       ? _selectedColor
-                      : null, // Custom selected text color
+                      : null,
+                  fontSize: 12,
+                  fontFamily: 'Lato',
+                  fontWeight: FontWeight.w400,
+                  height: 0.17, // Custom selected text color
                 ),
-                overflow: TextOverflow.ellipsis,
               ),
             );
           }),
@@ -84,8 +85,8 @@ class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
         body: const TabBarView(
           children: [
             Home(),
-            Saved(),
-            Party(),
+            SavedScreen(),
+            PartyScreen(),
             Booking(), // Make sure this matches the class name from your import
             Profile(),
           ],

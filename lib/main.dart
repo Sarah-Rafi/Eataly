@@ -8,6 +8,7 @@ import 'package:eataly/featuredCardsMenu.dart';
 import 'package:eataly/featuredCardsDetails.dart';
 import 'package:eataly/featuredCardsPhotos.dart';
 import 'components/topNavigationBar.dart';
+import 'package:eataly/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
       //home: Photos(),
       //home: Details(),
       //home: TopNavigationBarManu(),
-      home: BottomNavigationBarMenu(),
+      home: SplashScreen(),
+      //home: BottomNavigationBarMenu(),
     );
   }
 }

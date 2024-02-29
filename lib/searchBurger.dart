@@ -5,6 +5,7 @@ class ToggleIcon extends StatefulWidget {
   const ToggleIcon({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ToggleIconState createState() => _ToggleIconState();
 }
 
@@ -72,7 +73,7 @@ class SearchResults extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 9.5),
                 child: Image.asset(
-                  'assets/images/arrowLeft.png', // Replace with the actual path to your image asset
+                    'assets/images/arrowleft.png', // Replace with the actual path to your image asset
                   width: 24,
                   height: 24,
                   fit: BoxFit
@@ -129,7 +130,7 @@ class SearchResults extends StatelessWidget {
                             ),
                             const Spacer(),
                             Image.asset(
-                              'assets/images/Cross.png', // Replace with your image asset path
+                                'assets/images/CrossSmall.png', // Replace with your image asset path
                               width: 24,
                               height: 24,
                               fit: BoxFit.cover, // Adjust the fit as needed
