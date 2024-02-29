@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'loginscreen.dart';
 import 'otpscreen.dart';
 
 class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,8 +14,8 @@ class SignupScreen extends StatelessWidget {
             width: 432,
             height: 932,
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/backgroundimage.png'),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/backgroundimage.png'),
                 fit: BoxFit.cover,
               ),
               color: Colors.black.withOpacity(0.6),
@@ -23,8 +26,8 @@ class SignupScreen extends StatelessWidget {
             height: 932,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment(0.01, 1.00),
-                end: Alignment(-0.01, -1),
+                begin: const Alignment(0.01, 1.00),
+                end: const Alignment(-0.01, -1),
                 colors: [Colors.black, Colors.black.withOpacity(0.1)],
               ),
             ),
@@ -36,12 +39,12 @@ class SignupScreen extends StatelessWidget {
               width: 150,
               height: 100,
               child: Image.asset(
-                'assets/eataly.png',
+                'assets/images/eataly.png',
                 fit: BoxFit.fill,
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 47,
             top: 170,
             child: SizedBox(
@@ -59,7 +62,7 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: (340 - 80) / 2,
             top: 230,
             child: Text(
@@ -87,15 +90,15 @@ class SignupScreen extends StatelessWidget {
                       width: 300,
                       height: 50,
                       decoration: ShapeDecoration(
-                        color: Color(0x33D9D9D9),
+                        color: const Color(0x33D9D9D9),
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Colors.white),
+                          side: const BorderSide(width: 1, color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 28,
                     top: 5,
                     child: SizedBox(
@@ -113,7 +116,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 35,
                     top: 58,
                     child: SizedBox(
@@ -155,15 +158,15 @@ class SignupScreen extends StatelessWidget {
                       width: 300,
                       height: 50,
                       decoration: ShapeDecoration(
-                        color: Color(0x33D9D9D9),
+                        color: const Color(0x33D9D9D9),
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Colors.white),
+                          side: const BorderSide(width: 1, color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 28,
                     top: 5,
                     child: SizedBox(
@@ -181,7 +184,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 35,
                     top: 58,
                     child: SizedBox(
@@ -223,15 +226,15 @@ class SignupScreen extends StatelessWidget {
                       width: 300,
                       height: 50,
                       decoration: ShapeDecoration(
-                        color: Color(0x33D9D9D9),
+                        color: const Color(0x33D9D9D9),
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Colors.white),
+                          side: const BorderSide(width: 1, color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 28,
                     top: 5,
                     child: SizedBox(
@@ -249,7 +252,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 35,
                     top: 58,
                     child: SizedBox(
@@ -291,15 +294,15 @@ class SignupScreen extends StatelessWidget {
                       width: 300,
                       height: 50,
                       decoration: ShapeDecoration(
-                        color: Color(0x33D9D9D9),
+                        color: const Color(0x33D9D9D9),
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Colors.white),
+                          side: const BorderSide(width: 1, color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 28,
                     top: 5,
                     child: SizedBox(
@@ -317,7 +320,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 35,
                     top: 58,
                     child: SizedBox(
@@ -360,21 +363,22 @@ class SignupScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => OtpScreen()),
+                          MaterialPageRoute(
+                              builder: (context) => const OtpScreen()),
                         );
                       },
                       child: Container(
                         width: 300,
                         height: 50,
                         decoration: ShapeDecoration(
-                          color: Color(0xFF00B287),
+                          color: const Color(0xFF00B287),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
                         ),
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 138,
                     top: 24,
                     child: SizedBox(

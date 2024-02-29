@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'partydemoscreen.dart';
 
+// ignore: use_key_in_widget_constructors
 class AddFriendsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,19 +17,19 @@ class AddFriendsScreen extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(32),
               ),
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Stack(
                 children: [
                   Positioned(
                     top: 48,
                     left: 270,
                     child: Image.asset(
-                      'assets/cross.png',
+                      'assets/images/cross.png',
                       width: 40,
                       height: 40,
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 100,
                     left: 70,
                     child: SizedBox(
@@ -43,7 +44,7 @@ class AddFriendsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 145,
                     left: 125,
                     child: SizedBox(
@@ -58,7 +59,7 @@ class AddFriendsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 220,
                     left: 25,
                     child: SizedBox(
@@ -73,7 +74,7 @@ class AddFriendsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 245,
                     left: 25,
                     child: SizedBox(
@@ -95,14 +96,14 @@ class AddFriendsScreen extends StatelessWidget {
                       width: 280,
                       height: 80,
                       child: Container(
-                        padding: EdgeInsets.fromLTRB(8, 7, 8, 7),
+                        padding: const EdgeInsets.fromLTRB(8, 7, 8, 7),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           border: Border.all(
-                            color: Color(0xFF00B288),
+                            color: const Color(0xFF00B288),
                             width: 1,
                           ),
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [
                               Color(0xFFFFFFFF),
                               Color(0xFFFFFFFF),
@@ -111,7 +112,7 @@ class AddFriendsScreen extends StatelessWidget {
                             end: Alignment.centerRight,
                           ),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'http://eataly.com/party/invite123456789abcdefghijk123456789abcdefghijk12345678',
                             style: TextStyle(
@@ -128,7 +129,7 @@ class AddFriendsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 400,
                     left: 25,
                     child: SizedBox(
@@ -153,7 +154,7 @@ class AddFriendsScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => PartyDemoScreen(),
+                            builder: (context) => const PartyDemoScreen(),
                           ),
                         );
                       },
@@ -163,13 +164,13 @@ class AddFriendsScreen extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFF00B288),
+                            color: const Color(0xFF00B288),
                           ),
-                          padding: EdgeInsets.fromLTRB(16, 12, 16, 12),
+                          padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 'Copy Link',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -177,9 +178,9 @@ class AddFriendsScreen extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(width: 8),
+                              const SizedBox(width: 8),
                               Image.asset(
-                                'assets/copylink.png',
+                                'assets/images/copylink.png',
                                 width: 30,
                                 height: 30,
                               ),
@@ -199,13 +200,13 @@ class AddFriendsScreen extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Color(0xFF00B288),
+                          color: const Color(0xFF00B288),
                         ),
-                        padding: EdgeInsets.fromLTRB(16, 12, 16, 12),
+                        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
+                            const Text(
                               'Share Link',
                               style: TextStyle(
                                 color: Colors.white,
@@ -213,9 +214,9 @@ class AddFriendsScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(width: 8),
+                            const SizedBox(width: 8),
                             Image.asset(
-                              'assets/sharelink.png',
+                              'assets/images/sharelink.png',
                               width: 30,
                               height: 30,
                             ),
@@ -235,15 +236,15 @@ class AddFriendsScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
-                            color: Color(0xFF00B288),
+                            color: const Color(0xFF00B288),
                             width: 1,
                           ),
                         ),
-                        padding: EdgeInsets.fromLTRB(16, 12, 16, 12),
+                        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
+                            const Text(
                               'QR Code',
                               style: TextStyle(
                                 color: Color(0xFF00B288),
@@ -251,9 +252,9 @@ class AddFriendsScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(width: 8),
+                            const SizedBox(width: 8),
                             Image.asset(
-                              'assets/qrcode.png',
+                              'assets/images/qrcode.png',
                               width: 30,
                               height: 30,
                             ),

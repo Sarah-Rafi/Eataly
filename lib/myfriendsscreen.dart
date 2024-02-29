@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'yourpartyscreen.dart';
 
 class MyFriendsScreen extends StatelessWidget {
+  const MyFriendsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,14 +33,14 @@ class MyFriendsScreen extends StatelessWidget {
               clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.800000011920929),
-                border: Border(
+                border: const Border(
                   left: BorderSide(color: Color(0xFFD0D5DD)),
                   top: BorderSide(color: Color(0xFFD0D5DD)),
                   right: BorderSide(color: Color(0xFFD0D5DD)),
                   bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
                 ),
               ),
-              child: Column(
+              child: const Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,7 +68,7 @@ class MyFriendsScreen extends StatelessWidget {
                                   height: 0,
                                 ),
                               ),
-                              const SizedBox(height: 2),
+                              SizedBox(height: 2),
                               Text(
                                 'John Doe',
                                 style: TextStyle(
@@ -84,7 +86,7 @@ class MyFriendsScreen extends StatelessWidget {
                         Image(
                           width: 24,
                           height: 24,
-                          image: AssetImage('assets/notification.png'),
+                          image: AssetImage('assets/images/notification.png'),
                         )
                       ],
                     ),
@@ -92,7 +94,7 @@ class MyFriendsScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
+            const Positioned(
               top: 145, // Adjust the top position as needed
               left: 27, // Adjust the left position as needed
               child: Text(
@@ -111,11 +113,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -128,10 +130,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/eddie.png'),
+                          image: AssetImage('assets/images/eddie.png'),
                         ),
                       ),
                     ),
@@ -140,7 +142,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -154,7 +156,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -162,14 +164,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'Available for Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -190,15 +192,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -206,7 +208,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -226,11 +228,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -243,10 +245,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/freddie.png'),
+                          image: AssetImage('assets/images/freddie.png'),
                         ),
                       ),
                     ),
@@ -255,7 +257,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -269,7 +271,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -277,14 +279,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot1.png'),
+                                    image: AssetImage('assets/images/dot1.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -305,15 +307,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -321,7 +323,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -341,11 +343,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -358,10 +360,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/audrey.png'),
+                          image: AssetImage('assets/images/audrey.png'),
                         ),
                       ),
                     ),
@@ -370,7 +372,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -384,7 +386,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -392,14 +394,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -420,15 +422,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -436,7 +438,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -456,11 +458,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -473,10 +475,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/romanov.png'),
+                          image: AssetImage('assets/images/romanov.png'),
                         ),
                       ),
                     ),
@@ -485,7 +487,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -499,7 +501,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -507,14 +509,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'Available for Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -535,15 +537,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -551,7 +553,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -571,11 +573,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -588,10 +590,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/mark.png'),
+                          image: AssetImage('assets/images/mark.png'),
                         ),
                       ),
                     ),
@@ -600,7 +602,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -614,7 +616,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -622,14 +624,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot1.png'),
+                                    image: AssetImage('assets/images/dot1.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -650,15 +652,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -666,7 +668,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -686,11 +688,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -703,10 +705,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/albert.png'),
+                          image: AssetImage('assets/images/albert.png'),
                         ),
                       ),
                     ),
@@ -715,7 +717,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -729,7 +731,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -737,14 +739,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'Available for Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -765,15 +767,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -781,7 +783,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -801,11 +803,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -818,10 +820,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/michaela.png'),
+                          image: AssetImage('assets/images/michaela.png'),
                         ),
                       ),
                     ),
@@ -830,7 +832,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -844,7 +846,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -852,14 +854,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot1.png'),
+                                    image: AssetImage('assets/images/dot1.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -880,15 +882,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -896,7 +898,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -916,11 +918,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -933,10 +935,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/lim.png'),
+                          image: AssetImage('assets/images/lim.png'),
                         ),
                       ),
                     ),
@@ -945,7 +947,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -959,7 +961,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -967,14 +969,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -995,15 +997,15 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -1011,7 +1013,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -1031,11 +1033,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -1048,10 +1050,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/alex.png'),
+                          image: AssetImage('assets/images/alex.png'),
                         ),
                       ),
                     ),
@@ -1060,7 +1062,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50, // Adjust the left position as needed
@@ -1074,7 +1076,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -1082,14 +1084,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -1110,15 +1112,130 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
+                                  ),
+                                  Positioned(
+                                    top: 11,
+                                    child: Image(
+                                      width: 9, // Adjust width as needed
+                                      height: 3, // Adjust height as needed
+                                      image: AssetImage(
+                                          'assets/images/rec1.png'), // Replace with your image asset
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 860, // Adjust the top position as needed
+              left: 27, // Adjust the left position as needed
+              child: Container(
+                width: 305,
+                height: 64,
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: const Color(0xFFD0D5DD),
+                    width: 1,
+                  ),
+                  color: Colors.white,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(80),
+                        child: const Image(
+                          width: 38,
+                          height: 38,
+                          image: AssetImage('assets/images/arthur.png'),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 230,
+                      height: 40,
+                      child: Stack(
+                        children: [
+                          const Positioned(
+                            top: 0, // Adjust the top position as needed
+                            left: 0,
+                            right: 50, // Adjust the left position as needed
+                            child: Text(
+                              'Arthur Ace',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Positioned(
+                            top: 22,
+                            left: 0,
+                            child: Row(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(80),
+                                  child: const Image(
+                                    width: 6,
+                                    height: 6,
+                                    image: AssetImage('assets/images/dot1.png'),
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                const Text(
+                                  'In another Party',
+                                  style: TextStyle(
+                                    fontFamily: 'Lato',
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            top: 8,
+                            right: 0, // Adjust the right position as needed
+                            child: Container(
+                              width: 26,
+                              height: 26,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                color: const Color(0xFF00B288),
+                              ),
+                              child: const Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Image(
+                                    width: 3,
+                                    height: 9,
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
@@ -1141,16 +1258,16 @@ class MyFriendsScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 860, // Adjust the top position as needed
-              left: 27, // Adjust the left position as needed
+              top: 935,
+              left: 27,
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -1163,10 +1280,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/arthur.png'),
+                          image: AssetImage('assets/images/lucas.png'),
                         ),
                       ),
                     ),
@@ -1177,120 +1294,6 @@ class MyFriendsScreen extends StatelessWidget {
                         children: [
                           Positioned(
                             top: 0, // Adjust the top position as needed
-                            left: 0,
-                            right: 50, // Adjust the left position as needed
-                            child: Text(
-                              'Arthur Ace',
-                              style: TextStyle(
-                                fontFamily: 'Lato',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0,
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Positioned(
-                            top: 22,
-                            left: 0,
-                            child: Row(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(80),
-                                  child: Image(
-                                    width: 6,
-                                    height: 6,
-                                    image: AssetImage('assets/dot1.png'),
-                                  ),
-                                ),
-                                SizedBox(width: 8),
-                                Text(
-                                  'In another Party',
-                                  style: TextStyle(
-                                    fontFamily: 'Lato',
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                    letterSpacing: 0,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Positioned(
-                            top: 8,
-                            right: 0, // Adjust the right position as needed
-                            child: Container(
-                              width: 26,
-                              height: 26,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
-                              ),
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  Image(
-                                    width: 3,
-                                    height: 9,
-                                    image: AssetImage('assets/rec.png'),
-                                  ),
-                                  Positioned(
-                                    top: 11,
-                                    child: Image(
-                                      width: 9, // Adjust width as needed
-                                      height: 3,
-                                      image: AssetImage('assets/rec1.png'),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              top: 935,
-              left: 27,
-              child: Container(
-                width: 305,
-                height: 64,
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: Color(0xFFD0D5DD),
-                    width: 1,
-                  ),
-                  color: Colors.white,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(80),
-                        child: Image(
-                          width: 38,
-                          height: 38,
-                          image: AssetImage('assets/lucas.png'),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 230,
-                      height: 40,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            top: 0,
                             left: 0,
                             right: 50,
                             child: Text(
@@ -1303,7 +1306,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -1311,14 +1314,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -1339,22 +1342,23 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
                                     child: Image(
-                                      width: 9,
-                                      height: 3,
-                                      image: AssetImage('assets/rec1.png'),
+                                      width: 9, // Adjust width as needed
+                                      height: 3, // Adjust height as needed
+                                      image: AssetImage(
+                                          'assets/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -1374,11 +1378,11 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 305,
                 height: 64,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: Color(0xFFD0D5DD),
+                    color: const Color(0xFFD0D5DD),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -1391,10 +1395,10 @@ class MyFriendsScreen extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(80),
-                        child: Image(
+                        child: const Image(
                           width: 38,
                           height: 38,
-                          image: AssetImage('assets/luke.png'),
+                          image: AssetImage('assets/images/luke.png'),
                         ),
                       ),
                     ),
@@ -1404,7 +1408,7 @@ class MyFriendsScreen extends StatelessWidget {
                       child: Stack(
                         children: [
                           Positioned(
-                            top: 0,
+                            top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50,
                             child: Text(
@@ -1417,7 +1421,7 @@ class MyFriendsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Positioned(
                             top: 22,
                             left: 0,
@@ -1425,14 +1429,14 @@ class MyFriendsScreen extends StatelessWidget {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(80),
-                                  child: Image(
+                                  child: const Image(
                                     width: 6,
                                     height: 6,
-                                    image: AssetImage('assets/dot.png'),
+                                    image: AssetImage('assets/images/dot.png'),
                                   ),
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   'In another Party',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
@@ -1453,22 +1457,23 @@ class MyFriendsScreen extends StatelessWidget {
                               height: 26,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
-                                color: Color(0xFF00B288),
+                                color: const Color(0xFF00B288),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Image(
                                     width: 3,
                                     height: 9,
-                                    image: AssetImage('assets/rec.png'),
+                                    image: AssetImage('assets/images/rec.png'),
                                   ),
                                   Positioned(
                                     top: 11,
                                     child: Image(
-                                      width: 9,
-                                      height: 3,
-                                      image: AssetImage('assets/rec1.png'),
+                                      width: 9, // Adjust width as needed
+                                      height: 3, // Adjust height as needed
+                                      image: AssetImage(
+                                          'assets/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -1488,10 +1493,10 @@ class MyFriendsScreen extends StatelessWidget {
               child: Container(
                 width: 180,
                 height: 50,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Color(0xFF00B288),
+                  color: const Color(0xFF00B288),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: InkWell(
@@ -1505,7 +1510,7 @@ class MyFriendsScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Add More Friends',
                         style: TextStyle(
                           color: Colors.white,
@@ -1514,7 +1519,7 @@ class MyFriendsScreen extends StatelessWidget {
                         ),
                       ),
                       Image.asset(
-                        'assets/addfriends.png',
+                        'assets/images/addfriends.png',
                         width: 30,
                         height: 30,
                       ),

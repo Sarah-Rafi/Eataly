@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'savedscreen.dart';
+
+import 'searchBurger.dart';
 
 class SearchScreen extends StatelessWidget {
+  const SearchScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +21,7 @@ class SearchScreen extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.800000011920929),
-            border: Border(
+            border: const Border(
               left: BorderSide(color: Color(0xFFD0D5DD)),
               top: BorderSide(color: Color(0xFFD0D5DD)),
               right: BorderSide(color: Color(0xFFD0D5DD)),
@@ -34,7 +37,7 @@ class SearchScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => SavedScreen(),
+                      builder: (context) => const SearchResults(),
                     ),
                   );
                 },
@@ -42,9 +45,9 @@ class SearchScreen extends StatelessWidget {
                   width: 24,
                   height: 24,
                   clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/arrowleft.png'),
+                      image: AssetImage('assets/images/arrowleft.png'),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -56,7 +59,8 @@ class SearchScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SavedScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => const SearchResults()),
                     );
                   },
                   child: Container(
@@ -67,10 +71,11 @@ class SearchScreen extends StatelessWidget {
                     decoration: ShapeDecoration(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(width: 1, color: Color(0xFFCFD4DC)),
+                        side: const BorderSide(
+                            width: 1, color: Color(0xFFCFD4DC)),
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      shadows: [
+                      shadows: const [
                         BoxShadow(
                           color: Color(0x0C101828),
                           blurRadius: 2,
@@ -88,15 +93,15 @@ class SearchScreen extends StatelessWidget {
                           width: 24,
                           height: 30,
                           clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('assets/search.png'),
+                              image: AssetImage('assets/images/search.png'),
                               fit: BoxFit.fill,
                             ),
                           ),
                         ),
                         const SizedBox(width: 8),
-                        Expanded(
+                        const Expanded(
                           child: SizedBox(
                             height: 23,
                             child: Row(
@@ -138,7 +143,7 @@ class SearchScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Recent Searches',
                 style: TextStyle(
                   color: Color(0xFF00B288),
@@ -173,10 +178,10 @@ class SearchScreen extends StatelessWidget {
                                   width: 24,
                                   height: 24,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Stack(children: [
                                     Image.asset(
-                                      'assets/clock.png',
+                                      'assets/images/clock.png',
                                       width: 24,
                                       height: 24,
                                       fit: BoxFit.fill,
@@ -184,7 +189,7 @@ class SearchScreen extends StatelessWidget {
                                   ]),
                                 ),
                                 const SizedBox(width: 16),
-                                Text(
+                                const Text(
                                   'Aylanto Cafe',
                                   style: TextStyle(
                                     color: Color(0xFF222222),
@@ -210,7 +215,7 @@ class SearchScreen extends StatelessWidget {
                                   height: 10,
                                   child: Stack(children: [
                                     Image.asset(
-                                      'assets/cross.png',
+                                      'assets/images/cross.png',
                                       width: 24,
                                       height: 24,
                                       fit: BoxFit.fill,
@@ -241,10 +246,10 @@ class SearchScreen extends StatelessWidget {
                                   width: 24,
                                   height: 24,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Stack(children: [
                                     Image.asset(
-                                      'assets/clock.png',
+                                      'assets/images/clock.png',
                                       width: 24,
                                       height: 24,
                                       fit: BoxFit.fill,
@@ -252,7 +257,7 @@ class SearchScreen extends StatelessWidget {
                                   ]),
                                 ),
                                 const SizedBox(width: 16),
-                                Text(
+                                const Text(
                                   'Junoon Restaurant',
                                   style: TextStyle(
                                     color: Color(0xFF222222),
@@ -278,7 +283,7 @@ class SearchScreen extends StatelessWidget {
                                   height: 10,
                                   child: Stack(children: [
                                     Image.asset(
-                                      'assets/cross.png',
+                                      'assets/images/cross.png',
                                       width: 24,
                                       height: 24,
                                       fit: BoxFit.fill,
@@ -309,10 +314,10 @@ class SearchScreen extends StatelessWidget {
                                   width: 24,
                                   height: 24,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Stack(children: [
                                     Image.asset(
-                                      'assets/clock.png',
+                                      'assets/images/clock.png',
                                       width: 24,
                                       height: 24,
                                       fit: BoxFit.fill,
@@ -320,7 +325,7 @@ class SearchScreen extends StatelessWidget {
                                   ]),
                                 ),
                                 const SizedBox(width: 16),
-                                Column(
+                                const Column(
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -339,7 +344,7 @@ class SearchScreen extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(height: 18),
+                                    SizedBox(height: 18),
                                     Text(
                                       'Desi Experience',
                                       style: TextStyle(
@@ -368,7 +373,7 @@ class SearchScreen extends StatelessWidget {
                                   height: 10,
                                   child: Stack(children: [
                                     Image.asset(
-                                      'assets/cross.png',
+                                      'assets/images/cross.png',
                                       width: 24,
                                       height: 24,
                                       fit: BoxFit.fill,
@@ -395,7 +400,7 @@ class SearchScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Trending Searches',
                   style: TextStyle(
                     color: Color(0xFF00B288),
@@ -415,14 +420,14 @@ class SearchScreen extends StatelessWidget {
                         width: 178,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -431,20 +436,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Avari Dine In Experience',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Avari Dine In Experience',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                             ],
                           ),
@@ -454,14 +460,14 @@ class SearchScreen extends StatelessWidget {
                         width: 110,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -470,20 +476,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Masalawala',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Masalawala',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                               // Add text widget her
                             ],
@@ -503,14 +510,14 @@ class SearchScreen extends StatelessWidget {
                         width: 150,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -519,20 +526,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Balcony Restaurant',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Balcony Restaurant',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                             ],
                           ),
@@ -542,14 +550,14 @@ class SearchScreen extends StatelessWidget {
                         width: 102,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -558,20 +566,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Penthouse',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Penthouse',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                               // Add text widget her
                             ],
@@ -591,14 +600,14 @@ class SearchScreen extends StatelessWidget {
                         width: 75,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -607,20 +616,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'MONAL',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'MONAL',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                             ],
                           ),
@@ -630,14 +640,14 @@ class SearchScreen extends StatelessWidget {
                         width: 90,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -646,20 +656,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Arcadian',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Arcadian',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                               // Add text widget her
                             ],
@@ -670,14 +681,14 @@ class SearchScreen extends StatelessWidget {
                         width: 112,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -686,20 +697,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'LILY By Deja',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'LILY By Deja',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                               // Add text widget her
                             ],
@@ -719,14 +731,14 @@ class SearchScreen extends StatelessWidget {
                         width: 140,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -735,20 +747,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'London Courtyard',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'London Courtyard',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                             ],
                           ),
@@ -758,14 +771,14 @@ class SearchScreen extends StatelessWidget {
                         width: 108,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -774,20 +787,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Dahlia Cafe',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Dahlia Cafe',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                               // Add text widget her
                             ],
@@ -807,14 +821,14 @@ class SearchScreen extends StatelessWidget {
                         width: 108,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -823,20 +837,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Theatre Cafe',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Theatre Cafe',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                             ],
                           ),
@@ -846,14 +861,14 @@ class SearchScreen extends StatelessWidget {
                         width: 88,
                         height: 40,
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(
-                              color: Color(0xFFD0D5DD),
+                              color: const Color(0xFFD0D5DD),
                               width: 1,
                             ),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               colors: [
                                 Color(0xFFFFFFFF),
                                 Color(0xFFFFFFFF),
@@ -862,20 +877,21 @@ class SearchScreen extends StatelessWidget {
                               end: Alignment.centerRight,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-      'Tuscany',
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        height: 1.3, // This is equivalent to line height
-        letterSpacing: 0.0,
-        color: Color(0xFF222222),
-      ),
-      textAlign: TextAlign.left,
+                                'Tuscany',
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500,
+                                  height:
+                                      1.3, // This is equivalent to line height
+                                  letterSpacing: 0.0,
+                                  color: Color(0xFF222222),
+                                ),
+                                textAlign: TextAlign.left,
                               ),
                               // Add text widget her
                             ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'addfriendsscreen.dart';
 
 class PartyScreen extends StatelessWidget {
+  const PartyScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +34,7 @@ class PartyScreen extends StatelessWidget {
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.800000011920929),
-                      border: Border(
+                      border: const Border(
                         left: BorderSide(color: Color(0xFFD0D5DD)),
                         top: BorderSide(color: Color(0xFFD0D5DD)),
                         right: BorderSide(color: Color(0xFFD0D5DD)),
@@ -40,7 +42,7 @@ class PartyScreen extends StatelessWidget {
                             BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
                       ),
                     ),
-                    child: Column(
+                    child: const Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +70,7 @@ class PartyScreen extends StatelessWidget {
                 height: 0,
               ),
             ),
-            const SizedBox(height: 2),
+                                    SizedBox(height: 2),
             Text(
               'John Doe',
               style: TextStyle(
@@ -86,7 +88,8 @@ class PartyScreen extends StatelessWidget {
       Image(
         width: 24,
         height: 24,
-        image: AssetImage('assets/notification.png'),
+                                image: AssetImage(
+                                    'assets/images/notification.png'),
       ),
     ],
   ),
@@ -101,7 +104,7 @@ class PartyScreen extends StatelessWidget {
                     child: Center(
                       child: RichText(
                         textAlign: TextAlign.left,
-                        text: TextSpan(
+                        text: const TextSpan(
                           style: TextStyle(
                             fontFamily: 'Lato',
                             fontSize: 32,
@@ -117,24 +120,24 @@ class PartyScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Container(
                     width: 250,
                     height: 250,
                     margin: const EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/objects.png"),
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/objects.png"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Container(
                     width: 291,
                     height: 104,
-                    margin: EdgeInsets.only(top: 15),
+                    margin: const EdgeInsets.only(top: 15),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -142,8 +145,8 @@ class PartyScreen extends StatelessWidget {
                           width: 300,
                           height: 30,
                           alignment: Alignment.center,
-                          decoration: BoxDecoration(),
-                          child: Text(
+                          decoration: const BoxDecoration(),
+                          child: const Text(
                             'You haven’t saved any items',
                             style: TextStyle(
                               fontFamily: 'Lato',
@@ -153,14 +156,14 @@ class PartyScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Container(
                           width: 150,
                           height: 44,
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: Color(0xFF00B288),
+                            color: const Color(0xFF00B288),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: InkWell(
@@ -173,7 +176,7 @@ class PartyScreen extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   'Add Friends',
                                   style: TextStyle(
                                     color: Colors.white,
@@ -182,7 +185,7 @@ class PartyScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Image.asset(
-                                  'assets/addfriends.png',
+                                  'assets/images/addfriends.png',
                                   width: 30,
                                   height: 30,
                                 ),

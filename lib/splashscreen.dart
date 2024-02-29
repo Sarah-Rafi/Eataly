@@ -2,21 +2,23 @@ import 'package:eataly/loginscreen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
   Navigator.pushReplacement(
     context,
-    MaterialPageRoute(builder: (context) => LoginScreen()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
   );
 });
     return Scaffold(
       body: Container(
         width: 600,
         height: 800,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/rectangle.png'),
+            image: AssetImage('assets/images/rectangle.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -27,14 +29,14 @@ class SplashScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/eataly.png',
+                    'assets/images/eataly.png',
                     width: 200,
                     height: 200,
                   ),
                 ],
               ),
             ),
-            Positioned(
+            const Positioned(
               bottom: 30,
               left: 0,
               right: 0,
