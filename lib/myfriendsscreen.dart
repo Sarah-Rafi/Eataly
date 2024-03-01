@@ -1243,7 +1243,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -1292,7 +1292,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50,
@@ -1358,7 +1358,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -1407,7 +1407,7 @@ class MyFriendsScreen extends StatelessWidget {
                       height: 40,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
                             right: 50,
@@ -1473,7 +1473,7 @@ class MyFriendsScreen extends StatelessWidget {
                                       width: 9, // Adjust width as needed
                                       height: 3, // Adjust height as needed
                                       image: AssetImage(
-                                          'assets/rec1.png'), // Replace with your image asset
+                                          'assets/images/rec1.png'), // Replace with your image asset
                                     ),
                                   ),
                                 ],
@@ -1504,7 +1504,7 @@ class MyFriendsScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => YourPartyScreen()),
+                          builder: (context) => const YourPartyScreen()),
                     );
                   },
                   child: Row(

@@ -69,19 +69,25 @@ class SearchResults extends StatelessWidget {
           child: Row(
             mainAxisAlignment:
                 MainAxisAlignment.start, // Align items to the start of the row
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 9.5),
-                child: Image.asset(
-                    'assets/images/arrowleft.png', // Replace with the actual path to your image asset
-                  width: 24,
-                  height: 24,
-                  fit: BoxFit
-                      .cover, // This controls how the image should be inscribed into the box
-                ),
-              ),
+            children: [GestureDetector(
+  onTap: () {
+    // Navigate to the search screen when the left arrow is tapped
+    Navigator.of(context).pop();
+  },
+  child: Container(
+    width: 24,
+    height: 24,
+    clipBehavior: Clip.antiAlias,
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('assets/images/arrowleftt.png'),
+        fit: BoxFit.fill,
+      ),
+    ),
+  ),
+),
               Container(
-                width: 270,
+                width: 280,
                 height: 43,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
@@ -130,9 +136,9 @@ class SearchResults extends StatelessWidget {
                             ),
                             const Spacer(),
                             Image.asset(
-                                'assets/images/CrossSmall.png', // Replace with your image asset path
-                              width: 24,
-                              height: 24,
+                                'assets/images/crosssmall.png', // Replace with your image asset path
+                              width: 20,
+                              height: 20,
                               fit: BoxFit.cover, // Adjust the fit as needed
                             )
                           ],

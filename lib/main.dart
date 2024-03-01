@@ -1,13 +1,4 @@
-import 'components/bottomNavigatorBar.dart';
 import 'package:flutter/material.dart';
-import 'package:eataly/Home.dart';
-import 'package:eataly/searchBurger.dart';
-import 'package:eataly/featuredCardsBookings.dart';
-import 'package:eataly/featuredCardsReviews.dart';
-import 'package:eataly/featuredCardsMenu.dart';
-import 'package:eataly/featuredCardsDetails.dart';
-import 'package:eataly/featuredCardsPhotos.dart';
-import 'components/topNavigationBar.dart';
 import 'package:eataly/splashscreen.dart';
 
 void main() {

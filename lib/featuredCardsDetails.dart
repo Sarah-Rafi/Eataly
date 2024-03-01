@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Details extends StatelessWidget {
   const Details({Key? key}) : super(key: key);
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
         //implements basic material design

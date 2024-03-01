@@ -1,7 +1,9 @@
 import 'package:eataly/Bookings.dart';
 import 'package:eataly/Home.dart';
+// ignore: unused_import
 import 'package:eataly/Party.dart';
 import 'package:eataly/Profile.dart';
+// ignore: unused_import
 import 'package:eataly/Saved.dart';
 import 'package:flutter/material.dart';
 import 'package:eataly/partyscreen.dart';
@@ -17,7 +19,7 @@ class BottomNavigationBarMenu extends StatefulWidget {
 class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
   int _selectedIndex = 0; // Keeps track of the selected tab index
   // Define your custom color
-  final Color _selectedColor = Color(0xFF00B288);
+  final Color _selectedColor = const Color(0xFF00B288);
 
   // Paths for the unselected icons
   final List<String> _iconPaths = [

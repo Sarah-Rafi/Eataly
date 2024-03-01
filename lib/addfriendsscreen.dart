@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'partydemoscreen.dart';
+import 'partyscreen.dart';
 
 // ignore: use_key_in_widget_constructors
 class AddFriendsScreen extends StatelessWidget {
@@ -21,14 +22,23 @@ class AddFriendsScreen extends StatelessWidget {
               child: Stack(
                 children: [
                   Positioned(
-                    top: 48,
-                    left: 270,
-                    child: Image.asset(
-                      'assets/images/cross.png',
-                      width: 40,
-                      height: 40,
-                    ),
-                  ),
+  top: 48,
+  left: 270,
+  child: GestureDetector(
+    onTap: () {
+      // Navigate to PartyScreen when cross is tapped
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => PartyScreen()),
+      );
+    },
+    child: Image.asset(
+      'assets/images/cross.png',
+      width: 40,
+      height: 40,
+    ),
+  ),
+),
                   const Positioned(
                     top: 100,
                     left: 70,

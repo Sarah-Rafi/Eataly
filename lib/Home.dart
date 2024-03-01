@@ -47,70 +47,78 @@ class Home extends StatelessWidget {
         //scrolling widget
         children: [
           Container(
-            //first container
-            width: MediaQuery.of(context)
-                .size
-                .width, // This will match the screen width
-            height: 104,
-            padding: const EdgeInsets.only(
-              top: 32,
-              left: 24,
-            ),
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.800000011920929),
-              border: const Border(
-                left: BorderSide(color: Color(0xFFD0D5DD)),
-                top: BorderSide(color: Color(0xFFD0D5DD)),
-                right: BorderSide(color: Color(0xFFD0D5DD)),
-                bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
+              width: 400,
+              height: 90,
+              padding: const EdgeInsets.only(
+                top: 25,
+                left: 24,
+                right: 24,
+                bottom: 0,
+              ),
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.800000011920929),
+                border: const Border(
+                  left: BorderSide(color: Color(0xFFD0D5DD)),
+                  top: BorderSide(color: Color(0xFFD0D5DD)),
+                  right: BorderSide(color: Color(0xFFD0D5DD)),
+                  bottom: BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
+                ),
+              ),
+              child: const Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Good Morning',
+                                style: TextStyle(
+                                  color: Color(0xFF222222),
+                                  fontSize: 14,
+                                  fontFamily: 'Lato',
+                                  fontWeight: FontWeight.w500,
+                                  height: 0,
+                                ),
+                              ),
+                              SizedBox(height: 2),
+                              Text(
+                                'John Doe',
+                                style: TextStyle(
+                                  color: Color(0xFF222222),
+                                  fontSize: 22,
+                                  fontFamily: 'Lato',
+                                  fontWeight: FontWeight.w600,
+                                  height: 0,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: 190),
+                        Image(
+                          width: 24,
+                          height: 24,
+                          image: AssetImage('assets/images/notification.png'),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
-            child: const Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: double.infinity,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Good Morning',
-                            style: TextStyle(
-                              color: Color(0xFF222222),
-                              fontSize: 14,
-                              fontFamily: 'Lato',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
-                          ),
-                          Text(
-                            'John Doe',
-                            style: TextStyle(
-                              color: Color(0xFF222222),
-                              fontSize: 22,
-                              fontFamily: 'Lato',
-                              fontWeight: FontWeight.w600,
-                              height: 0,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
           GestureDetector(
             onTap: () {
               Navigator.push(
@@ -156,7 +164,7 @@ class Home extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                TopNavigationBarManu()), // Navigate to NewScreen1
+                                const TopNavigationBarManu()), // Navigate to NewScreen1
                       );
                     },
                     child: Padding(

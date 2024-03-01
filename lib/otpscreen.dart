@@ -1,12 +1,29 @@
 import 'package:flutter/material.dart';
-import 'searchscreen.dart';
 import 'loginscreen.dart';
 
 class OtpScreen extends StatelessWidget {
-  const OtpScreen({super.key});
+  const OtpScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
+    List<TextEditingController> controllers = List.generate(4, (_) => TextEditingController());
+
+    void clearOtherTextFields(int index) {
+      for (int i = 0; i < controllers.length; i++) {
+        if (i != index) {
+          controllers[i].clear();
+        }
+      }
+    }
+
+    void handleTextFieldChange(int index, String value) {
+      if (value.length == 1) {
+        if (index < controllers.length - 1) {
+          FocusScope.of(context).nextFocus();
+        }
+      }
+    }
+
     return Scaffold(
       body: Stack(
         children: [
@@ -111,53 +128,60 @@ class OtpScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              for (int i = 0; i < 4; i++)
-                                Padding(
-                                  padding: const EdgeInsets.all(12),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            for (int i = 0; i < 4; i++)
+                              Padding(
+                                padding: const EdgeInsets.all(12),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    clearOtherTextFields(i);
+                                  },
                                   child: Container(
                                     padding: const EdgeInsets.all(12),
                                     decoration: ShapeDecoration(
                                       color: Colors.white,
                                       shape: RoundedRectangleBorder(
-                                        side: BorderSide(
-                                            width: 1, color: Color(0xFFD0D5DD)),
+                                        side: const BorderSide(
+                                            width: 0, color: Colors.transparent),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                     ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        SizedBox(
-                                          width: 20,
-                                          height: 20,
-                                          child: Text(
-                                            '0',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Color(0xFF555555),
-                                              fontSize: 16,
-                                              fontFamily: 'Lato',
-                                              fontWeight: FontWeight.w700,
-                                              height: 0,
-                                            ),
+                                    child: SizedBox(
+                                      width: 20,
+                                      height: 20,
+                                      child: TextField(
+                                        controller: controllers[i],
+                                        textAlign: TextAlign.center,
+                                        keyboardType: TextInputType.number,
+                                        maxLength: 1,
+                                        onChanged: (value) {
+                                          handleTextFieldChange(i, value);
+                                        },
+                                        style: const TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 16,
+                                          fontFamily: 'Lato',
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                        decoration: const InputDecoration(
+                                          counterText: "",
+                                          focusedBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
+                                          enabledBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide.none,
                                           ),
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                            ],
-                          ),
+                              ),
+                          ],
                         ),
                       ],
                     ),
@@ -198,16 +222,16 @@ class OtpScreen extends StatelessWidget {
                     ),
                   ),
                   const Positioned(
-                    left: 138,
+                    left: 130,
                     top: 24,
                     child: SizedBox(
-                      width: 61,
+                      width: 102,
                       height: 24,
                       child: Text(
                         'Get Started',
                         style: TextStyle(
                           color: Color(0xFFD3D3D3),
-                          fontSize: 11,
+                          fontSize: 16,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w700,
                           height: 0.06,
