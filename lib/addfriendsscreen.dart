@@ -29,7 +29,7 @@ class AddFriendsScreen extends StatelessWidget {
       // Navigate to PartyScreen when cross is tapped
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => PartyScreen()),
+        MaterialPageRoute(builder: (context) => const PartyScreen()),
       );
     },
     child: Image.asset(
