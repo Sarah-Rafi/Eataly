@@ -110,7 +110,7 @@ class NotificationsScreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color:Color(0xFF00B288), // Set your desired color
+                  color:const Color(0xFF00B288), // Set your desired color
                 ),
                 child: const Center(
                   child: Text(
@@ -186,7 +186,7 @@ class NotificationsScreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Color(0xFF00B288), // Set your desired color
+                  color: const Color(0xFF00B288), // Set your desired color
                 ),
                 child: const Center(
                   child: Text(
@@ -295,7 +295,7 @@ class NotificationsScreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Color(0xFF00B288), // Set your desired color
+                  color: const Color(0xFF00B288), // Set your desired color
                 ),
                 child: const Center(
                   child: Text(
@@ -498,7 +498,7 @@ class NotificationsScreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Color(0xFF00B288), // Set your desired color
+                  color: const Color(0xFF00B288), // Set your desired color
                 ),
                 child: const Center(
                   child: Text(
