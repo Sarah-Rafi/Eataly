@@ -128,13 +128,9 @@ class YourPartyScreen extends StatelessWidget {
             Positioned(
   top: 320,
   left: 22,
-  child: Container(
+  child: SizedBox(
     width: 335,
     height: 104,
-    decoration: BoxDecoration(
-      color: Colors.blue,
-      borderRadius: BorderRadius.circular(16.0),
-    ),
     child: SizedBox(
       width: double.infinity, // Set a width larger than the blue frame
       child: SingleChildScrollView(
@@ -153,7 +149,7 @@ class YourPartyScreen extends StatelessWidget {
                   Text(
                     memberData[index]['name']!,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color:Color(0xFF222222),
                       fontFamily: 'Lato',
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
@@ -170,7 +166,7 @@ class YourPartyScreen extends StatelessWidget {
   ),
 ),
             Positioned(
-              bottom: 270,
+              bottom: 280,
               left: 25,
               child: Container(
                 width: 320,
