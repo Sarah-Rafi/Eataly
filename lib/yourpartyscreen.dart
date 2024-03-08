@@ -1,6 +1,7 @@
-import 'package:eataly/notificationsscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'notificationsscreen.dart';
 
 class YourPartyScreen extends StatelessWidget {
   const YourPartyScreen({Key? key}) : super(key: key);
@@ -125,34 +126,55 @@ class YourPartyScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 300,
-              left: 0,
-              child: SizedBox(
-                width: 384,
-                height: 110,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
+  top: 320,
+  left: 22,
+  child: Container(
+    width: 335,
+    height: 104,
+    decoration: BoxDecoration(
+      color: Colors.blue,
+      borderRadius: BorderRadius.circular(16.0),
+    ),
+    child: SizedBox(
+      width: double.infinity, // Set a width larger than the blue frame
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: List.generate(memberData.length, (index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    radius: 32,
+                    backgroundImage: AssetImage(memberData[index]['image']!),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      buildPartyMember('assets/images/you.png', 'You'),
-                      buildPartyMember('assets/images/eddie.png', 'Eddie'),
-                      buildPartyMember('assets/images/audrey.png', 'Audrey'),
-                      buildPartyMember('assets/images/romanov.png', 'Romanov'),
-                    ],
+                  const SizedBox(height: 4),
+                  Text(
+                    memberData[index]['name']!,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Lato',
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      height: 1.67, // Equivalent to line-height: 20px
+                    ),
                   ),
-                ),
+                ],
               ),
-            ),
+            );
+          }),
+        ),
+      ),
+    ),
+  ),
+),
             Positioned(
-              bottom: 300,
+              bottom: 270,
               left: 25,
               child: Container(
                 width: 320,
-                height: 38,
+                height: 40,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50.0),
                   gradient: const LinearGradient(
@@ -194,7 +216,7 @@ class YourPartyScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 600,
+              top: 590,
               left: 32,
               child: InkWell(
                 onTap: () {
@@ -248,48 +270,19 @@ class YourPartyScreen extends StatelessWidget {
   }
 }
 
-Widget buildPartyMember(String imagePath, String memberName) {
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: [
-      Container(
-        width: 64,
-        height: 64,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(32),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(32),
-          child: Image.asset(
-            imagePath,
-            width: 64,
-            height: 64,
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
-      const SizedBox(height: 4),
-      Text(
-        memberName,
-        style: const TextStyle(
-          fontFamily: 'Lato',
-          fontSize: 12,
-          fontWeight: FontWeight.w600,
-          height: 1,
-          letterSpacing: 0,
-          color: Color(0xFF222222),
-          decoration: TextDecoration.none,
-        ),
-        textAlign: TextAlign.center,
-      ),
-    ],
-  );
-}
-
 void main() {
   runApp(const MaterialApp(
     home: YourPartyScreen(),
   ));
 }
+
+// Sample member data
+List<Map<String, String>> memberData = [
+  {'name': 'You', 'image': 'assets/images/you.png'},
+  {'name': 'Eddie', 'image': 'assets/images/eddie.png'},
+  {'name': 'Audrey', 'image': 'assets/images/audrey.png'},
+  {'name': 'Romanov', 'image': 'assets/images/romanov.png'},
+  {'name': 'Mark', 'image': 'assets/images/mark.png'},
+  {'name': 'Albert', 'image': 'assets/images/albert.png'},
+  {'name': 'freddie', 'image': 'assets/images/freddie.png'},
+];
