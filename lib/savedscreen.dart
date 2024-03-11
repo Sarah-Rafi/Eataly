@@ -12,7 +12,7 @@ class SavedScreen extends StatelessWidget {
           children: [
             Container(
               width: 390,
-              height: 180,
+              height: 100,
               clipBehavior: Clip.antiAlias,
               decoration: ShapeDecoration(
                 color: Colors.white,
@@ -20,88 +20,56 @@ class SavedScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(32),
                 ),
               ),
-              child: Column(
+              child: const Stack(
                 children: [
-                  Container(
-                    width: 400,
-                    height: 120,
-                    padding: const EdgeInsets.only(
-                      top: 55,
-                      left: 24,
-                      right: 24,
-                      bottom: 0,
+                  Positioned(
+                    left: 16, // Adjust the left position for the image
+                    top: 60,
+                    child: Image(
+                      width: 30,
+                      height: 30,
+                      image: AssetImage('assets/images/arrow-left.png'),
                     ),
-                    clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.800000011920929),
-                      border: const Border(
-                        left: BorderSide(color: Color(0xFFD0D5DD)),
-                        top: BorderSide(color: Color(0xFFD0D5DD)),
-                        right: BorderSide(color: Color(0xFFD0D5DD)),
-                        bottom:
-                            BorderSide(width: 0.50, color: Color(0xFFD0D5DD)),
-                      ),
-                    ),
-                    child: const Column(
+                  ),
+                  Positioned(
+                    left: 60, // Adjust the left position for the text
+                    top: 60,
+                    child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
-                          width: double.infinity,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-  child: Row(
-    mainAxisSize: MainAxisSize.min,
-    mainAxisAlignment: MainAxisAlignment.start,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Good Morning',
-            style: TextStyle(
-              color: Color(0xFF222222),
-              fontSize: 14,
-              fontFamily: 'Lato',
-              fontWeight: FontWeight.w500,
-              height: 1.0, // Adjust the height as needed
-            ),
-          ),
-                                        SizedBox(height: 2),
-          Text(
-            'John Doe',
-            style: TextStyle(
-              color: Color(0xFF222222),
-              fontSize: 22,
-              fontFamily: 'Lato',
-              fontWeight: FontWeight.w600,
-              height: 1.0, // Adjust the height as needed
-            ),
-          ),
-        ],
-      ),
-      SizedBox(width: 190),
-      Image(
-        width: 24,
-        height: 24,
-                                      image: AssetImage(
-                                          'assets/images/notification.png'),
-      ),
-    ],
-  ),                             
-)
-                            ],
+                        Text(
+                          'Good Morning',
+                          style: TextStyle(
+                            color: Color(0xFF222222),
+                            fontSize: 14,
+                            fontFamily: 'Lato',
+                            fontWeight: FontWeight.w500,
+                            height: 1.0,
+                          ),
+                        ),
+                        SizedBox(height: 2),
+                        Text(
+                          'John Doe',
+                          style: TextStyle(
+                            color: Color(0xFF222222),
+                            fontSize: 22,
+                            fontFamily: 'Lato',
+                            fontWeight: FontWeight.w600,
+                            height: 1.0,
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                  Positioned(
+                    right: 16, // Adjust the right position for the notification icon
+                    top: 60,
+                    child: Image(
+                      width: 24,
+                      height: 24,
+                      image: AssetImage('assets/images/notification.png'),
                     ),
                   ),
                 ],
@@ -110,7 +78,7 @@ class SavedScreen extends StatelessWidget {
             Container(
               width: 180,
               height: 200,
-              margin: const EdgeInsets.only(top: 0, left: 0),
+              margin: const EdgeInsets.only(top: 80, left: 0),
               child: Container(
                 width: 200,
                 height: 200,
