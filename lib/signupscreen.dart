@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'loginscreen.dart';
 import 'otpscreen.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -118,18 +117,24 @@ class SignupScreen extends StatelessWidget {
                   ),
                   const Positioned(
                     left: 35,
-                    top: 52,
+                    top: 58,
                     child: SizedBox(
                       width: 173,
                       height: 16,
-                      child: Text(
-                        'Enter Your Name',
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Enter Your Name',
+                          hintStyle: TextStyle(
+                            color: Color(0xFFD3D3D3),
+                            fontSize: 14,
+                            fontFamily: 'Lato',
+                            fontWeight: FontWeight.w400,
+                          ),
+                          border: InputBorder.none, // Remove underline
+                        ),
                         style: TextStyle(
-                          color: Color(0xFFD3D3D3),
-                          fontSize: 14,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
+                          color: Color(
+                              0xFFD3D3D3), // Set text color to be visible when user enters text
                         ),
                       ),
                     ),
@@ -180,18 +185,24 @@ class SignupScreen extends StatelessWidget {
                   ),
                   const Positioned(
                     left: 35,
-                    top: 52,
+                    top: 58,
                     child: SizedBox(
                       width: 173,
                       height: 16,
-                      child: Text(
-                        'Enter Your Phone Number',
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Enter Your Phone Number',
+                          hintStyle: TextStyle(
+                            color: Color(0xFFD3D3D3),
+                            fontSize: 14,
+                            fontFamily: 'Lato',
+                            fontWeight: FontWeight.w400,
+                          ),
+                          border: InputBorder.none, // Remove underline
+                        ),
                         style: TextStyle(
-                          color: Color(0xFFD3D3D3),
-                          fontSize: 14,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
+                          color: Color(
+                              0xFFD3D3D3), // Set text color to be visible when user enters text
                         ),
                       ),
                     ),
@@ -242,18 +253,24 @@ class SignupScreen extends StatelessWidget {
                   ),
                   const Positioned(
                     left: 35,
-                    top: 52,
+                    top: 58,
                     child: SizedBox(
                       width: 173,
                       height: 16,
-                      child: Text(
-                        'Enter Your Password',
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Enter Your Password',
+                          hintStyle: TextStyle(
+                            color: Color(0xFFD3D3D3),
+                            fontSize: 14,
+                            fontFamily: 'Lato',
+                            fontWeight: FontWeight.w400,
+                          ),
+                          border: InputBorder.none, // Remove underline
+                        ),
                         style: TextStyle(
-                          color: Color(0xFFD3D3D3),
-                          fontSize: 14,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
+                          color: Color(
+                              0xFFD3D3D3), // Set text color to be visible when user enters text
                         ),
                       ),
                     ),
@@ -304,18 +321,24 @@ class SignupScreen extends StatelessWidget {
                   ),
                   const Positioned(
                     left: 35,
-                    top: 52,
+                    top: 58,
                     child: SizedBox(
                       width: 173,
                       height: 16,
-                      child: Text(
-                        'Re-enter Your Password',
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Re-enter Your Password',
+                          hintStyle: TextStyle(
+                            color: Color(0xFFD3D3D3),
+                            fontSize: 14,
+                            fontFamily: 'Lato',
+                            fontWeight: FontWeight.w400,
+                          ),
+                          border: InputBorder.none, // Remove underline
+                        ),
                         style: TextStyle(
-                          color: Color(0xFFD3D3D3),
-                          fontSize: 14,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
+                          color: Color(
+                              0xFFD3D3D3), // Set text color to be visible when user enters text
                         ),
                       ),
                     ),

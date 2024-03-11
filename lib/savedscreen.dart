@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'partyscreen.dart';
+import 'home.dart';
 
 class SavedScreen extends StatelessWidget {
   const SavedScreen({super.key});
@@ -166,7 +166,7 @@ class SavedScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PartyScreen()),
+                  MaterialPageRoute(builder: (context) => const Home()),
                 );
               },
               child: Container(

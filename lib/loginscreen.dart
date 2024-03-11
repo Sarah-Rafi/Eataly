@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signupscreen.dart';
+// ignore: unused_import
 import 'Home.dart';
 import 'components/bottomNavigatorBar.dart';
 
@@ -259,23 +260,29 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                               const Positioned(
-                                left: 30,
-                                top: 52,
-                                child: SizedBox(
-                                  width: 173,
-                                  height: 16,
-                                  child: Text(
-                                    'Enter Your Phone Number',
-                                    style: TextStyle(
-                                      color: Color(0xFFD3D3D3),
-                                      fontSize: 14,
-                                      fontFamily: 'Lato',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
+  left: 30,
+  top: 58,
+  child: SizedBox(
+    width: 173,
+    height: 16,
+    child: TextField(
+      decoration: InputDecoration(
+        hintText: 'Enter Your Phone Number',
+        hintStyle: TextStyle(
+          color: Color(0xFFD3D3D3),
+          fontSize: 14,
+          fontFamily: 'Lato',
+          fontWeight: FontWeight.w400,
+        ),
+        border: InputBorder.none, // Remove underline
+      ),
+      style: TextStyle(
+        color: Color(0xFFD3D3D3), // Set text color to be visible when user enters text
+      ),
+    ),
+  ),
+)
+
                             ],
                           ),
                         ),
@@ -320,23 +327,28 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                               const Positioned(
-                                left: 30,
-                                top: 52,
-                                child: SizedBox(
-                                  width: 173,
-                                  height: 16,
-                                  child: Text(
-                                    'Enter Your Password',
-                                    style: TextStyle(
-                                      color: Color(0xFFD3D3D3),
-                                      fontSize: 14,
-                                      fontFamily: 'Lato',
-                                      fontWeight: FontWeight.w400,
-                                      height: 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
+  left: 30,
+  top: 58,
+  child: SizedBox(
+    width: 173,
+    height: 16,
+    child: TextField(
+      decoration: InputDecoration(
+        hintText: 'Enter Your Password',
+        hintStyle: TextStyle(
+          color: Color(0xFFD3D3D3),
+          fontSize: 14,
+          fontFamily: 'Lato',
+          fontWeight: FontWeight.w400,
+        ),
+        border: InputBorder.none, // Remove underline
+      ),
+      style: TextStyle(
+        color: Color(0xFFD3D3D3), // Set text color to be visible when user enters text
+      ),
+    ),
+  ),
+)
                             ],
                           ),
                         ),

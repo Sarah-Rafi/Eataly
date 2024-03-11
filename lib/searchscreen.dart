@@ -34,72 +34,68 @@ class SearchScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => const SearchResults(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 24,
-                  height: 24,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/arrowleft.png'),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
+  onTap: () {
+    // Navigate to the home screen when the left arrow is tapped
+    Navigator.of(context).pop();
+  },
+  child: Container(
+    width: 24,
+    height: 24,
+    clipBehavior: Clip.antiAlias,
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('assets/images/arrowleftt.png'),
+        fit: BoxFit.fill,
+      ),
+    ),
+  ),
+),
+const SizedBox(width: 16),
+Expanded(
+  child: InkWell(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const SearchResults(),
+        ),
+      );
+    },
+    child: Container(
+      height: 44,
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      clipBehavior: Clip.antiAlias,
+      decoration: ShapeDecoration(
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(width: 1, color: Color(0xFFCFD4DC)),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        shadows: const [
+          BoxShadow(
+            color: Color(0x0C101828),
+            blurRadius: 2,
+            offset: Offset(0, 1),
+            spreadRadius: 0,
+          )
+        ],
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            width: 24,
+            height: 30,
+            clipBehavior: Clip.antiAlias,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/search.png'),
+                fit: BoxFit.fill,
               ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SearchResults()),
-                    );
-                  },
-                  child: Container(
-                    height: 44,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 10),
-                    clipBehavior: Clip.antiAlias,
-                    decoration: ShapeDecoration(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                            width: 1, color: Color(0xFFCFD4DC)),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      shadows: const [
-                        BoxShadow(
-                          color: Color(0x0C101828),
-                          blurRadius: 2,
-                          offset: Offset(0, 1),
-                          spreadRadius: 0,
-                        )
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 24,
-                          height: 30,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/search.png'),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
+            ),
+          ),
                         const SizedBox(width: 8),
                         const Expanded(
                           child: SizedBox(

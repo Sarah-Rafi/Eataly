@@ -1,4 +1,3 @@
-import 'components/bottomNavigatorBar.dart';
 import 'package:flutter/material.dart';
 import 'package:eataly/Home.dart';
 import 'package:eataly/Bookings.dart';

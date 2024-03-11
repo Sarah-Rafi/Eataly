@@ -1258,8 +1258,8 @@ class MyFriendsScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 935, // Adjust the top position as needed
-              left: 27, // Adjust the left position as needed
+              top: 935,
+              left: 27,
               child: Container(
                 width: 305,
                 height: 64,
@@ -1295,7 +1295,7 @@ class MyFriendsScreen extends StatelessWidget {
                           const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
-                            right: 50, // Adjust the left position as needed
+                            right: 50,
                             child: Text(
                               'Lucas Andrade',
                               style: TextStyle(
@@ -1336,7 +1336,7 @@ class MyFriendsScreen extends StatelessWidget {
                           ),
                           Positioned(
                             top: 8,
-                            right: 0, // Adjust the right position as needed
+                            right: 0,
                             child: Container(
                               width: 26,
                               height: 26,
@@ -1373,8 +1373,8 @@ class MyFriendsScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 1010, // Adjust the top position as needed
-              left: 27, // Adjust the left position as needed
+              top: 1010,
+              left: 27,
               child: Container(
                 width: 305,
                 height: 64,
@@ -1410,7 +1410,7 @@ class MyFriendsScreen extends StatelessWidget {
                           const Positioned(
                             top: 0, // Adjust the top position as needed
                             left: 0,
-                            right: 50, // Adjust the left position as needed
+                            right: 50,
                             child: Text(
                               'Luke Vialy',
                               style: TextStyle(
@@ -1451,7 +1451,7 @@ class MyFriendsScreen extends StatelessWidget {
                           ),
                           Positioned(
                             top: 8,
-                            right: 0, // Adjust the right position as needed
+                            right: 0,
                             child: Container(
                               width: 26,
                               height: 26,
@@ -1488,8 +1488,8 @@ class MyFriendsScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 1100, // Adjust the top position as needed
-              left: 80, // Adjust the left position as needed
+              top: 1100,
+              left: 80,
               child: Container(
                 width: 180,
                 height: 50,
@@ -1504,7 +1504,7 @@ class MyFriendsScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => YourPartyScreen()),
+                          builder: (context) => const YourPartyScreen()),
                     );
                   },
                   child: Row(
