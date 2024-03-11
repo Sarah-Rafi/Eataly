@@ -2,7 +2,6 @@ import 'package:eataly/Bookings.dart';
 import 'package:eataly/Home.dart';
 import 'package:eataly/Party.dart';
 import 'package:eataly/Profile.dart';
-import 'package:eataly/Saved.dart';
 import 'package:flutter/material.dart';
 import 'package:eataly/partyscreen.dart';
 import 'package:eataly/savedscreen.dart';
