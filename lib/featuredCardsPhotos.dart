@@ -218,6 +218,9 @@ class Photos extends StatelessWidget {
           ],
         ),
       ),
-    ]));
+        
+        ],
+      ),
+    );
   }
 }

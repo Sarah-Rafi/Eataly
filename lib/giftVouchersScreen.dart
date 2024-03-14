@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class GiftVoucherScreen extends StatelessWidget {
@@ -142,7 +141,7 @@ class GiftVoucherScreen extends StatelessWidget {
                 child: Row(
                   mainAxisSize: MainAxisSize
                       .min, // Use min to prevent the Row from occupying more space than its children need
-                  children: const [
+                  children: <Widget>[
                     Text(
                       'Redeem Gift Vouchers', // Replace with your button text
                       style: TextStyle(
@@ -150,6 +149,12 @@ class GiftVoucherScreen extends StatelessWidget {
                         fontWeight:
                             FontWeight.bold, // Adjust font weight if needed
                       ),
+                    ),
+                    SizedBox(width: 10),
+                    Image.asset(
+                      'assets/images/redeem.png', // Replace with your asset image path
+                      width: 20, // Adjust the size as needed
+                      height: 20, // Adjust the size as needed
                     ),
                   ],
                 ),

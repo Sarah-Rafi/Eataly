@@ -397,7 +397,7 @@ class PartyDemoScreen extends StatelessWidget {
                               ),
                         const SizedBox(width: 8),
                               Image.asset(
-                          'assets/images/vuesax.png',
+                          'assets/images/redeem.png',
                                 width: 30,
                                 height: 30,
                               ),

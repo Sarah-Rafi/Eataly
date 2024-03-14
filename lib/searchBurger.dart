@@ -104,7 +104,7 @@ class SearchResults extends StatelessWidget {
                       blurRadius: 2,
                       offset: Offset(0, 1),
                       spreadRadius: 0,
-                    )
+                      ),
                   ],
                 ),
                 child: Row(
@@ -140,7 +140,7 @@ class SearchResults extends StatelessWidget {
                               width: 20,
                               height: 20,
                               fit: BoxFit.cover, // Adjust the fit as needed
-                            )
+                              ),
                           ],
                         ),
                       ),
@@ -1605,7 +1605,7 @@ class SearchResults extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

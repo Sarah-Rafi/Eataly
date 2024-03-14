@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Details extends StatelessWidget {
@@ -8,9 +10,12 @@ class Details extends StatelessWidget {
     return Scaffold(
         //implements basic material design
         body: ListView(
+        padding: const EdgeInsets.all(24.0),
             //scrolling widget
             children: [
-          const Text(
+          const Padding(
+            padding: EdgeInsets.only(bottom: 8.0), // Add padding at the bottom
+            child: Text(
             'Details',
             style: TextStyle(
               color: Color(0xFF00B288),
@@ -19,6 +24,7 @@ class Details extends StatelessWidget {
               fontWeight: FontWeight.w700,
               height: 0,
             ),
+          ),
           ),
           Container(
             width: 342,
@@ -120,7 +126,7 @@ class Details extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Container(
-                  width: 310,
+                  width: 278,
                   clipBehavior: Clip.antiAlias,
                   decoration: ShapeDecoration(
                     color: const Color(0xFFCACACA),
@@ -134,7 +140,7 @@ class Details extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        width: 310,
+                        width: 278,
                         height: 196,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
@@ -173,30 +179,20 @@ class Details extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    Image.asset(
+                      'assets/images/call.png', // Replace with your actual image path
                       width: 20,
                       height: 20,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: Stack(children: []),
-                          ),
-                        ],
-                      ),
+                      fit: BoxFit
+                          .cover, // You can change this to BoxFit.fill if you want to stretch the image.
                     ),
-                    SizedBox(width: 12),
-                    
-                    Text(
+                    const SizedBox(width: 12),
+                    const Text(
                       '+ 123  456  789',
                       style: TextStyle(
                         color: Color(0xFF00B288),
@@ -210,29 +206,20 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Row(
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    Image.asset(
+                      'assets/images/dollar.png', // Replace with your actual image path
                       width: 20,
                       height: 20,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: Stack(children: []),
-                          ),
-                        ],
-                      ),
+                      fit: BoxFit
+                          .cover, // You can change this to BoxFit.fill if you want to stretch the image.
                     ),
-                    SizedBox(width: 12),
-                    Text.rich(
+                    const SizedBox(width: 12),
+                    const Text.rich(
                       TextSpan(
                         children: [
                           TextSpan(
@@ -296,21 +283,12 @@ class Details extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
+                    Image.asset(
+                      'assets/images/dine.png', // Replace with your actual image path
                       width: 20,
                       height: 20,
-                      padding: const EdgeInsets.only(
-                        top: 2,
-                        left: 2,
-                        right: 2,
-                        bottom: 2.53,
-                      ),
-                      child: const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [],
-                      ),
+                      fit: BoxFit
+                          .cover, // You can change this to BoxFit.fill if you want to stretch the image.
                     ),
                     const SizedBox(width: 12),
                     const Text(
@@ -326,7 +304,7 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Row(
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -342,17 +320,26 @@ class Details extends StatelessWidget {
                           SizedBox(
                             width: 20,
                             height: 20,
-                            child: Stack(children: []),
+                            child: Stack(children: [
+                              Image.asset(
+                                'assets/images/timeGreen.png', // Replace with your actual image path
+                                width: 20,
+                                height: 20,
+                                fit: BoxFit
+                                    .cover, // You can change this to BoxFit.fill if you want to stretch the image.
+                              ),
+                            ]),
                           ),
                         ],
                       ),
                     ),
-                    SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
+                        SizedBox(width: 12),
                         Text(
                           'Restaurant Availability Time',
                           style: TextStyle(
@@ -397,33 +384,24 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Row(
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    Image.asset(
+                      'assets/images/creditcard.png', // Replace with your actual image path
                       width: 20,
                       height: 20,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: Stack(children: []),
-                          ),
-                        ],
-                      ),
+                      fit: BoxFit
+                          .cover, // You can change this to BoxFit.fill if you want to stretch the image.
                     ),
-                    SizedBox(width: 12),
-                    Text(
-                      'Payoneer, Master Card, VISA Card, PayPal',
+                    const SizedBox(width: 12),
+                    const Text(
+                      'Payoneer,MasterCard,VISACard,PayPal',
                       style: TextStyle(
                         color: Color(0xFF888888),
-                        fontSize: 16,
+                        fontSize: 15,
                         fontFamily: 'Lato',
                         fontWeight: FontWeight.w400,
                         height: 0,
@@ -432,18 +410,20 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Row(
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    Image.asset(
+                      'assets/images/parking.png', // Replace with your actual image path
                       width: 20,
                       height: 20,
-                      child: Stack(children: []),
+                      fit: BoxFit
+                          .cover, // You can change this to BoxFit.fill if you want to stretch the image.
                     ),
-                    SizedBox(width: 12),
-                    Column(
+                    const SizedBox(width: 12),
+                    const Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -463,7 +443,7 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Row(
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -476,16 +456,18 @@ class Details extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(
+                          Image.asset(
+                            'assets/images/bookingsGreen.png', // Replace with your actual image path
                             width: 20,
                             height: 20,
-                            child: Stack(children: []),
+                            fit: BoxFit
+                                .cover, // You can change this to BoxFit.fill if you want to stretch the image.
                           ),
                         ],
                       ),
                     ),
-                    SizedBox(width: 12),
-                    Column(
+                    const SizedBox(width: 12),
+                    const Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -509,7 +491,7 @@ class Details extends StatelessWidget {
                         ),
                         SizedBox(height: 8),
                         SizedBox(
-                          width: 310,
+                          width: 280,
                           height: 380,
                           child: Text(
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n',
@@ -528,7 +510,9 @@ class Details extends StatelessWidget {
                 ),
               ],
             ),
-          )
-        ]));
+          ),
+        ],
+      ),
+    );
   }
 }

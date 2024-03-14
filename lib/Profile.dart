@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'giftVouchersScreen.dart';
+import 'loyaltyRewardsScreen.dart';
+import 'bookingRewardsScreen.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -8,6 +10,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
@@ -83,139 +86,166 @@ class Profile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment
                         .spaceEvenly, // Even spacing for the containers
                     children: [
-                      Container(
-                        width: 103.0, // width in logical pixels
-                        height: 116.0, // height in logical pixels
-                        padding:
-                            const EdgeInsets.all(10), // padding for inner space
-                        decoration: BoxDecoration(
-                          color: const Color(
-                              0xFFF8BBD0), // Light pink color from the Material color palette
-                          borderRadius:
-                              BorderRadius.circular(8), // Rounded corners
-                          boxShadow: [
-                            BoxShadow(
-                              color:
-                                  Colors.black.withOpacity(0.1), // Shadow color
-                              spreadRadius: 1,
-                              blurRadius: 3,
-                              offset: const Offset(
-                                  0, 1), // changes position of shadow
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            // Replace this with your image asset
-                            Image.asset(
-                              'assets/images/gift.png',
-                              width: 24.0, // Image width
-                              height: 24.0, // Image height
-                              color: Colors
-                                  .black54, // If you want to apply a color filter to the image
-                            ),
-                            const SizedBox(
-                                height: 8), // Space between image and text
-                            const Text(
-                              'Gift Vouchers',
-                              style: TextStyle(
-                                color: Colors.black54,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0, // Font size for the text
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => GiftVoucherScreen()),
+                          );
+                        },
+                        child: Container(
+                          width: 103.0, // width in logical pixels
+                          height: 116.0, // height in logical pixels
+                          padding: const EdgeInsets.all(
+                              10), // padding for inner space
+                          decoration: BoxDecoration(
+                            color: const Color(
+                                0xFFF8BBD0), // Light pink color from the Material color palette
+                            borderRadius:
+                                BorderRadius.circular(8), // Rounded corners
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black
+                                    .withOpacity(0.1), // Shadow color
+                                spreadRadius: 1,
+                                blurRadius: 3,
+                                offset: const Offset(
+                                    0, 1), // changes position of shadow
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              // Replace this with your image asset
+                              Image.asset(
+                                'assets/images/gift.png',
+                                width: 24.0, // Image width
+                                height: 24.0, // Image height
+                                color: Colors
+                                    .black54, // If you want to apply a color filter to the image
+                              ),
+                              const SizedBox(
+                                  height: 8), // Space between image and text
+                              const Text(
+                                'Gift Vouchers',
+                                style: TextStyle(
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14.0, // Font size for the text
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      Container(
-                        width: 103.0, // width in logical pixels
-                        height: 116.0, // height in logical pixels
-                        padding:
-                            const EdgeInsets.all(10), // padding for inner space
-                        decoration: BoxDecoration(
-                          color: const Color(
-                              0xFFBDEBFF), // Light pink color from the Material color palette
-                          borderRadius:
-                              BorderRadius.circular(8), // Rounded corners
-                          boxShadow: [
-                            BoxShadow(
-                              color:
-                                  Colors.black.withOpacity(0.1), // Shadow color
-                              spreadRadius: 1,
-                              blurRadius: 3,
-                              offset: const Offset(
-                                  0, 1), // changes position of shadow
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            // Replace this with your image asset
-                            Image.asset(
-                              'assets/images/loyalty.png',
-                              width: 24.0, // Image width
-                              height: 24.0, // Image height
-                              color: Colors
-                                  .black54, // If you want to apply a color filter to the image
-                            ),
-                            const SizedBox(
-                                height: 8), // Space between image and text
-                            const Text(
-                              'Loyalty Rewards',
-                              style: TextStyle(
-                                color: Colors.black54,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0, // Font size for the text
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => loyaltyRewardsScreen()),
+                          );
+                        },
+                        child: Container(
+                          width: 103.0, // width in logical pixels
+                          height: 116.0, // height in logical pixels
+                          padding: const EdgeInsets.all(
+                              10), // padding for inner space
+                          decoration: BoxDecoration(
+                            color: const Color(
+                                0xFFBDEBFF), // Light pink color from the Material color palette
+                            borderRadius:
+                                BorderRadius.circular(8), // Rounded corners
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black
+                                    .withOpacity(0.1), // Shadow color
+                                spreadRadius: 1,
+                                blurRadius: 3,
+                                offset: const Offset(
+                                    0, 1), // changes position of shadow
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              // Replace this with your image asset
+                              Image.asset(
+                                'assets/images/loyalty.png',
+                                width: 24.0, // Image width
+                                height: 24.0, // Image height
+                                color: Colors
+                                    .black54, // If you want to apply a color filter to the image
+                              ),
+                              const SizedBox(
+                                  height: 8), // Space between image and text
+                              const Text(
+                                'Loyalty Rewards',
+                                style: TextStyle(
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14.0, // Font size for the text
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      Container(
-                        width: 103.0, // width in logical pixels
-                        height: 116.0, // height in logical pixels
-                        padding:
-                            const EdgeInsets.all(10), // padding for inner space
-                        decoration: BoxDecoration(
-                          color: const Color(
-                              0xFFFFE4B0), // Light pink color from the Material color palette
-                          borderRadius:
-                              BorderRadius.circular(8), // Rounded corners
-                          boxShadow: [
-                            BoxShadow(
-                              color:
-                                  Colors.black.withOpacity(0.1), // Shadow color
-                              spreadRadius: 1,
-                              blurRadius: 3,
-                              offset: const Offset(
-                                  0, 1), // changes position of shadow
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            // Replace this with your image asset
-                            Image.asset(
-                              'assets/images/booking.png',
-                              width: 24.0, // Image width
-                              height: 24.0, // Image height
-                              color: Colors
-                                  .black54, // If you want to apply a color filter to the image
-                            ),
-                            const SizedBox(
-                                height: 8), // Space between image and text
-                            const Text(
-                              'Booking Rewards',
-                              style: TextStyle(
-                                color: Colors.black54,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0, // Font size for the text
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => bookingRewardsScreen()),
+                          );
+                        },
+                        child: Container(
+                          width: 103.0, // width in logical pixels
+                          height: 116.0, // height in logical pixels
+                          padding: const EdgeInsets.all(
+                              10), // padding for inner space
+                          decoration: BoxDecoration(
+                            color: const Color(
+                                0xFFFFE4B0), // Light pink color from the Material color palette
+                            borderRadius:
+                                BorderRadius.circular(8), // Rounded corners
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black
+                                    .withOpacity(0.1), // Shadow color
+                                spreadRadius: 1,
+                                blurRadius: 3,
+                                offset: const Offset(
+                                    0, 1), // changes position of shadow
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              // Replace this with your image asset
+                              Image.asset(
+                                'assets/images/booking.png',
+                                width: 24.0, // Image width
+                                height: 24.0, // Image height
+                                color: Colors
+                                    .black54, // If you want to apply a color filter to the image
+                              ),
+                              const SizedBox(
+                                  height: 8), // Space between image and text
+                              const Text(
+                                'Booking Rewards',
+                                style: TextStyle(
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14.0, // Font size for the text
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -283,7 +313,7 @@ class Profile extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -298,6 +328,11 @@ class Profile extends StatelessWidget {
                             primary: Colors.teal, // Background color
                             onPrimary:
                                 Colors.white, // Text Color (Foreground color)
+                            shape: RoundedRectangleBorder(
+                              // Define the button's shape
+                              borderRadius: BorderRadius.circular(
+                                  8), // Reduced corner radius
+                            ),
                           ),
                           onPressed: () {
                             // Handle Re-Book action
@@ -372,7 +407,7 @@ class Profile extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -387,6 +422,11 @@ class Profile extends StatelessWidget {
                             primary: Colors.teal, // Background color
                             onPrimary:
                                 Colors.white, // Text Color (Foreground color)
+                            shape: RoundedRectangleBorder(
+                              // Define the button's shape
+                              borderRadius: BorderRadius.circular(
+                                  8), // Reduced corner radius
+                            ),
                           ),
                           onPressed: () {
                             // Handle Re-Book action
@@ -461,7 +501,7 @@ class Profile extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -476,6 +516,11 @@ class Profile extends StatelessWidget {
                             primary: Colors.teal, // Background color
                             onPrimary:
                                 Colors.white, // Text Color (Foreground color)
+                            shape: RoundedRectangleBorder(
+                              // Define the button's shape
+                              borderRadius: BorderRadius.circular(
+                                  8), // Reduced corner radius
+                            ),
                           ),
                           onPressed: () {
                             // Handle Re-Book action
@@ -550,7 +595,7 @@ class Profile extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -565,6 +610,11 @@ class Profile extends StatelessWidget {
                             primary: Colors.teal, // Background color
                             onPrimary:
                                 Colors.white, // Text Color (Foreground color)
+                            shape: RoundedRectangleBorder(
+                              // Define the button's shape
+                              borderRadius: BorderRadius.circular(
+                                  8), // Reduced corner radius
+                            ),
                           ),
                           onPressed: () {
                             // Handle Re-Book action
@@ -654,6 +704,11 @@ class Profile extends StatelessWidget {
                             primary: Colors.teal, // Background color
                             onPrimary:
                                 Colors.white, // Text Color (Foreground color)
+                            shape: RoundedRectangleBorder(
+                              // Define the button's shape
+                              borderRadius: BorderRadius.circular(
+                                  8), // Reduced corner radius
+                            ),
                           ),
                           onPressed: () {
                             // Handle Re-Book action

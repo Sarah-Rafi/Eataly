@@ -142,7 +142,7 @@ class bookingRewardsScreen extends StatelessWidget {
                 child: Row(
                   mainAxisSize: MainAxisSize
                       .min, // Use min to prevent the Row from occupying more space than its children need
-                  children: const [
+                  children: <Widget>[
                     Text(
                       'Redeem Booking Rewards', // Replace with your button text
                       style: TextStyle(
@@ -151,6 +151,12 @@ class bookingRewardsScreen extends StatelessWidget {
                             FontWeight.bold, // Adjust font weight if needed
                       ),
                     ),
+                    SizedBox(width: 5),
+                    Image.asset(
+                      'assets/images/redeem.png', // Replace with your asset image path
+                      width: 20, // Adjust the size as needed
+                      height: 20, // Adjust the size as needed
+                    ),            
                   ],
                 ),
               ),

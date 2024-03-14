@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'fourTable.dart';
+import 'twoTable.dart';
+import 'eightTable.dart';
+import 'sixTable.dart';
 
 class Bookings extends StatelessWidget {
   const Bookings({Key? key}) : super(key: key);
@@ -25,6 +29,16 @@ class Bookings extends StatelessWidget {
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TwoTable()), // Replace YourNewScreen with the actual screen class you want to navigate to
+              );
+            },
+            child: 
           Container(
             margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
@@ -78,6 +92,17 @@ class Bookings extends StatelessWidget {
               ],
             ),
           ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        FourTable()), // Replace YourNewScreen with the actual screen class you want to navigate to
+              );
+            },
+            child: 
           Container(
             margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
@@ -143,11 +168,22 @@ class Bookings extends StatelessWidget {
               ],
             ),
           ),
+          ),
         ],
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        SixTable()), // Replace YourNewScreen with the actual screen class you want to navigate to
+              );
+            },
+            child: 
           Container(
             margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
@@ -201,6 +237,17 @@ class Bookings extends StatelessWidget {
               ],
             ),
           ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EightTable()), // Replace YourNewScreen with the actual screen class you want to navigate to
+              );
+            },
+            child: 
           Container(
             margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
@@ -254,11 +301,22 @@ class Bookings extends StatelessWidget {
               ],
             ),
           ),
+          ),
         ],
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TwoTable()), // Replace YourNewScreen with the actual screen class you want to navigate to
+              );
+            },
+            child: 
           Container(
             margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
@@ -312,6 +370,17 @@ class Bookings extends StatelessWidget {
               ],
             ),
           ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        TwoTable()), // Replace YourNewScreen with the actual screen class you want to navigate to
+              );
+            },
+            child: 
           Container(
             margin: const EdgeInsets.only(top: 16, bottom: 16),
             width: 163,
@@ -364,6 +433,7 @@ class Bookings extends StatelessWidget {
                 ),
               ],
             ),
+          ),
           ),
         ],
       ),

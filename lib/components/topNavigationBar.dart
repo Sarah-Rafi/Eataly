@@ -321,6 +321,11 @@ class TopNavigationBarManu extends StatelessWidget {
                 ),
               ),
               const TabBar(
+              isScrollable: true,
+              labelColor: Color(0xFF00B288), // Selected tab text color
+              unselectedLabelColor: Colors.grey, // Unselected tab text color
+              indicatorColor:
+                  Color(0xFF00B288), // Underline color for selected tab
                 tabs: [
                   Tab(text: 'Bookings'),
                   Tab(text: 'Reviews'),
@@ -336,13 +341,14 @@ class TopNavigationBarManu extends StatelessWidget {
                     Bookings(),
                     Reviews(),
                     Photos(),
-                    Menus(),
+                  MenuListWidget(),
                     Details(),
                   ],
                 ),
               ),
             ],
           ),
-        ));
+      ),
+    );
   }
 }
