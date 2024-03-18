@@ -26,7 +26,6 @@ class AddFriendsScreen extends StatelessWidget {
   left: 270,
   child: GestureDetector(
     onTap: () {
-      // Navigate to PartyScreen when cross is tapped
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const PartyScreen()),
@@ -160,7 +159,6 @@ class AddFriendsScreen extends StatelessWidget {
                     right: 0,
                     child: InkWell(
                       onTap: () {
-                        // Navigate to PartyDemoScreen when Copy Link is pressed
                         Navigator.push(
                           context,
                           MaterialPageRoute(

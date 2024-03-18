@@ -6,9 +6,7 @@ class Details extends StatelessWidget {
  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //implements basic material design
         body: ListView(
-            //scrolling widget
             children: [
           const Text(
             'Details',
@@ -87,13 +85,12 @@ class Details extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          width: 16, // Adjust width as needed
-                          height: 18, // Adjust height as needed
-                          // Right margin of 12px
+                          width: 16,
+                          height: 18,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
-                                  'assets/images/location.png'), // Your image URL
+                                  'assets/images/location.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -101,9 +98,8 @@ class Details extends StatelessWidget {
                         const Padding(
                           padding: EdgeInsets.only(
                               left:
-                                  8), // Add 24px top margin and 8px bottom padding
+                                  8), 
                           child:
-                              // This ensures text takes up remaining space
                               Text(
                             '243 San Street, 371 Road, Ireland',
                             style: TextStyle(

@@ -6,11 +6,10 @@ class Bookings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //implements basic material design
         body: ListView(children: [
       const Padding(
         padding: EdgeInsets.only(
-            top: 24, left: 24), // Add 24px top margin and 8px bottom padding
+            top: 24, left: 24),
         child: Text(
           'Available Seats',
           style: TextStyle(
@@ -57,9 +56,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/2seat.png', // Replace with your image asset path
+                        'assets/images/2seat.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover, 
                       ),
                     ),
                   ],
@@ -118,9 +117,9 @@ class Bookings extends StatelessWidget {
                               width: 130.50,
                               height: 130.50,
                               child: Image.asset(
-                                'assets/images/4seat.png', // Replace with your image asset path
+                                'assets/images/4seat.png',
                                 fit: BoxFit
-                                    .cover, // This makes sure the image covers the container area
+                                    .cover,
                               ),
                             ),
                           ),
@@ -180,9 +179,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/6seat.png', // Replace with your image asset path
+                        'assets/images/6seat.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover,
                       ),
                     ),
                   ],
@@ -233,9 +232,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/8seat.png', // Replace with your image asset path
+                        'assets/images/8seat.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover,
                       ),
                     ),
                   ],
@@ -291,9 +290,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/4seat.png', // Replace with your image asset path
+                        'assets/images/4seat.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover,
                       ),
                     ),
                   ],
@@ -344,9 +343,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/2seat.png', // Replace with your image asset path
+                        'assets/images/2seat.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover,
                       ),
                     ),
                   ],
@@ -415,9 +414,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/2seatBlack.png', // Replace with your image asset path
+                        'assets/images/2seatBlack.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover,
                       ),
                     ),
                   ],
@@ -468,9 +467,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/4seatBlack.png', // Replace with your image asset path
+                        'assets/images/4seatBlack.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover,
                       ),
                     ),
                   ],
@@ -526,9 +525,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/6seatBlack.png', // Replace with your image asset path
+                        'assets/images/6seatBlack.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover, 
                       ),
                     ),
                   ],
@@ -579,9 +578,9 @@ class Bookings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                       child: Image.asset(
-                        'assets/images/8seatBlack.png', // Replace with your image asset path
+                        'assets/images/8seatBlack.png',
                         fit: BoxFit
-                            .cover, // This makes sure the image covers the container area
+                            .cover,
                       ),
                     ),
                   ],
